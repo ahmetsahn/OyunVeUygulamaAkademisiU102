@@ -61,7 +61,9 @@ Karakterimiz uzay gemisiyle U-102 gezegenine iniş yapar. Amacımız gezegende b
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
+
  ![1](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/83590669/5c4608b1-8aac-4358-946e-fe5fa4a9e8c6)
+ 
  ![2](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/83590669/255f9d6a-5f93-4493-b6ef-8a679cfe365c)
 
 - **Sprint Review**: 
