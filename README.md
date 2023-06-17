@@ -68,7 +68,7 @@ Karakterimiz uzay gemisiyle U-102 gezegenine iniş yapar. Amacımız gezegende b
  ![2](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/83590669/255f9d6a-5f93-4493-b6ef-8a679cfe365c)
 
 - **Sprint Review**: 
-Oyunun genel yapısına ve hikâyesine karar verilmiş, karakter belirlenmiş, karakter kontrolü ve silah mekaniği oluşturulmuştur. Oyun mekanikleri için fikirler değerlendirilmiştir. 
+Oyunun genel yapısına ve hikâyesine karar verilmiş, karakter belirlenmiş, karakter kontrolü ve silah mekaniği oluşturulmuştur. Oyun mekanikleri için fikirler değerlendirilmiştir. Sprint Review katılımcıları: Roşna Sarıkaş, Ahmet Öztürk Şahin, Ali Uzunkaya
 
 - **Sprint Retrospective:**
   •    Ekipteki eksik üyeler ile iletişime geçilmiş, bir tane daha developer eklenmiştir.
