@@ -49,8 +49,8 @@ Karakterimiz uzay gemisiyle U-102 gezegenine iniş yapar. Amacımız gezegende b
 
 
 - **Daily Scrum**: Daily Scrum toplantıları hergün discord üzerinden sesli olarak yapıldı.  
-[Sprint 1 Daily Scrum Chats]
-- https://docs.google.com/document/d/1RrlBaiEN7us95UjSm5SHOunO5mizxZoJdzrlLMD99Ro/edit?usp=sharing
+  [Sprint 1 Daily Scrum Chats]
+  https://docs.google.com/document/d/1RrlBaiEN7us95UjSm5SHOunO5mizxZoJdzrlLMD99Ro/edit?usp=sharing
 
 - **Sprint board update**: Sprint board screenshotları: 
 ![Sprint](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/83590669/049dcca5-ba62-4657-84ee-7a8cdb49d6cf)
