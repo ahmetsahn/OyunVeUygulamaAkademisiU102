@@ -12,7 +12,7 @@ Takım Unity U-102
 
 ## Oyun İsmi
 
---Scrap App--
+-- --
 
 
 ## Oyun Açıklaması
