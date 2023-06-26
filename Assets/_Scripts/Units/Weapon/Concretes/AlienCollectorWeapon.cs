@@ -6,11 +6,6 @@ public class AlienCollectorWeapon : BaseWeapon
     [SerializeField] private IntReference currentAmmo;
     [SerializeField] private int maxAmmo = 3;
 
-    private void Start()
-    {
-        currentAmmo.Value = 0;
-    }
-
     public override void Shoot()
     {
         if (MousePosition.Instance.GetMousePos() != Vector3.zero)
