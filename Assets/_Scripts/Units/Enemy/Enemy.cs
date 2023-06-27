@@ -5,9 +5,9 @@ public class Enemy : MonoBehaviour
 {
     private IEnemyState currentState;
     public FreeState freeState = new();
-    public WarState warState = new();
-
+    public AttackState attackState = new();
     private EnemyAIMovement enemyAIMovement;
+    [field: SerializeField] public Transform playerTransform { get; private set; }
 
     private void Awake()
     {
@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         currentState = freeState;
+        currentState.EnterState(this);
     }
 
     private void Update()
@@ -27,10 +28,28 @@ public class Enemy : MonoBehaviour
     public void SetState(IEnemyState state)
     {
         currentState = state;
+        currentState.EnterState(this);
     }
 
-    public void HandleFreeMovement()
+    public void HandleFreeMovementEnter()
     {
-        enemyAIMovement.FreeMove();
+        enemyAIMovement.FreeMoveEnter();
     }
+
+    public void HandleFreeMovementUpdate()
+    {
+        enemyAIMovement.FreeMoveUpdate();
+    }
+    
+    public void HandlerAttackEnter()
+    {
+        enemyAIMovement.AttackEnter();
+    }
+
+    public void HandlerAttackUpdate()
+    {
+        enemyAIMovement.AttackUpdate();    
+    }
+
+  
 }

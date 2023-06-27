@@ -2,16 +2,16 @@ using UnityEngine;
 
 namespace EnemySystem
 {
-    public class FreeState : IEnemyState
+    public class AttackState : IEnemyState
     {
         public void EnterState(Enemy enemy)
         {
-            enemy.HandleFreeMovementEnter();
+            enemy.HandlerAttackEnter();    
         }
-
+        
         public void UpdateState(Enemy enemy)
         {
-            enemy.HandleFreeMovementUpdate();
+            enemy.HandlerAttackUpdate();
         }
     }
 }

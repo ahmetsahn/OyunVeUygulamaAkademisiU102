@@ -14,11 +14,19 @@ public class EnemyAnimation : MonoBehaviour
     {
         animator.SetBool("IsIdle", true);
         animator.SetBool("IsWalking", false);
+        animator.SetBool("IsAttacking", false);
     }
 
     public void SetWalkState()
     {
         animator.SetBool("IsIdle", false);
         animator.SetBool("IsWalking", true);
+        animator.SetBool("IsAttacking", false);
+    }
+
+    public void SetAttackState() {
+        animator.SetBool("IsIdle", false);
+        animator.SetBool("IsWalking", false);
+        animator.SetBool("IsAttacking", true);
     }
 }

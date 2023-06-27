@@ -1,25 +1,36 @@
 using UnityEngine;
 using UnityEngine.AI;
+using DG.Tweening;
 
 public class EnemyAIMovement : MonoBehaviour
 {
     private NavMeshAgent agent;
-    [SerializeField] private float range;
+    [SerializeField] private float walkRange = 10;
 
     [SerializeField] private float waitTime = 3.0f;
     private EnemyAnimation enemyAnimation;
-   
-
     private float timer;
+
+    public float playerRange = 5f;
+
+    private Enemy enemy;
+    private bool playerInRange = false;
 
     private void Awake()
     {
-        
+        enemy = GetComponent<Enemy>();
         agent = GetComponent<NavMeshAgent>();
         enemyAnimation = GetComponent<EnemyAnimation>();
     }
 
-    public void FreeMove()
+    public void FreeMoveEnter()
+    {
+        agent.SetDestination(transform.position);
+        agent.isStopped = false;
+        enemyAnimation.SetIdleState();
+    }
+
+    public void FreeMoveUpdate()
     {
 
         if (agent.remainingDistance <= agent.stoppingDistance)
@@ -31,7 +42,7 @@ public class EnemyAIMovement : MonoBehaviour
             {
                 Vector3 point;
 
-                if (RandomPoint(transform.position, range, out point))
+                if (RandomPoint(transform.position, walkRange, out point))
                 {
                     Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
                     enemyAnimation.SetWalkState();
@@ -42,6 +53,40 @@ public class EnemyAIMovement : MonoBehaviour
 
         }
 
+        PlayerInRangeControl();
+
+    }
+
+    private void PlayerInRangeControl()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, playerRange);
+
+        bool playerDetected = false;
+
+        foreach (Collider collider in colliders)
+        {
+            if (collider.CompareTag("Player"))
+            {
+                playerDetected = true;
+                break;
+            }
+        }
+
+        if (playerDetected && !playerInRange)
+        {
+            
+            playerInRange = true;
+           
+            enemy.SetState(enemy.attackState);
+
+        }
+        else if (!playerDetected && playerInRange)
+        {
+            
+            playerInRange = false;
+            enemy.SetState(enemy.freeState);
+
+        }
     }
 
     private bool RandomPoint(Vector3 center, float range, out Vector3 result)
@@ -59,4 +104,29 @@ public class EnemyAIMovement : MonoBehaviour
         result = Vector3.zero;
         return false;
     }
+
+  
+
+    public void AttackEnter()
+    {
+        agent.isStopped = true;
+        enemyAnimation.SetAttackState();
+    }
+
+    public void AttackUpdate()
+    {
+        transform.DOLookAt(enemy.playerTransform.position, 0.2f);
+        PlayerInRangeControl();
+    }
+
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, playerRange);
+    }
+
+
+
 }
