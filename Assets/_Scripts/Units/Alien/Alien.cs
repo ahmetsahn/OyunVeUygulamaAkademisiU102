@@ -1,3 +1,4 @@
+using AlienSystem;
 using UnityEngine;
 
 
@@ -7,7 +8,12 @@ public class Alien : MonoBehaviour
     public FreeState freeState = new();
     public WorkState workState = new();
 
-    [SerializeField] private AlienAIMovement alienAIMovement;
+    private AlienAIMovement alienAIMovement;
+
+    private void Awake()
+    {
+        alienAIMovement = GetComponent<AlienAIMovement>();
+    }
 
     private void Start()
     {

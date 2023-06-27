@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class WorkState : IAlienState
+namespace AlienSystem
 {
-    public void UpdateState(Alien alien)
+    public class WorkState : IAlienState
     {
-        alien.HandleWorkMovement();
+        public void UpdateState(Alien alien)
+        {
+            alien.HandleWorkMovement();
+        }
     }
 }

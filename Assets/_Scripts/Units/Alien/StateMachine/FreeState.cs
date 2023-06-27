@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class FreeState : IAlienState
+namespace AlienSystem
 {
-    public void UpdateState(Alien alien)
+    public class FreeState : IAlienState
     {
-        alien.HandleFreeMovement();
+        public void UpdateState(Alien alien)
+        {
+            alien.HandleFreeMovement();
+        }
     }
 }

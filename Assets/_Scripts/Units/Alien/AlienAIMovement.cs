@@ -6,8 +6,8 @@ using DG.Tweening;
 
 public class AlienAIMovement : MonoBehaviour
 {
-    public NavMeshAgent agent;
-    public float range;
+    private NavMeshAgent agent;
+    [SerializeField] private float range;
 
     [SerializeField] private float waitTime = 3.0f;
     [SerializeField] private UnityEvent OnWork;
