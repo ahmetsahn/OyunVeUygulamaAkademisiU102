@@ -77,8 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b170116698affcf4687197b4fd9bb48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxHitRed: {fileID: 613433886817584986, guid: 9f5fbcfb6299c2b4c912f3ff44f14463,
-    type: 3}
 --- !u!1 &1476915993420121221
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +148,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476915994171635769}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
