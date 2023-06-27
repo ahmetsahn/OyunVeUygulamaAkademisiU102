@@ -5,9 +5,8 @@ public class EnemyAttack : MonoBehaviour
     public Transform target; // Hedef nesne (sizin karakteriniz)
     public float shootingInterval = 1f; // Ateþ aralýðý
     public float bulletSpeed = 50f; // Mermi hýzý
-    public GameObject bulletPrefab; // Mermi prefabý
     public Transform spawnPoint; // Mermi prefabý
-
+    [SerializeField][Range(0, 20f)] private float randomAngleRange;
     private float nextShotTime;
 
     
@@ -27,14 +26,23 @@ public class EnemyAttack : MonoBehaviour
 
     private void Shoot()
     {
+        GetBullet();
+    }
+        
+
+    private void GetBullet()
+    {
         Vector3 targetDirection = target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(targetDirection, Vector3.up);
 
-        float randomAngle = Random.Range(-10f, 10f);
+        float randomAngle = Random.Range(-randomAngleRange, randomAngleRange);
         Quaternion randomRotation = Quaternion.Euler(0f, randomAngle, 0f) * rotation;
-
-        GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, randomRotation);
+        
+        var bullet = EnemyBulletPool.Instance.Get();
+        bullet.transform.SetPositionAndRotation(spawnPoint.transform.position, randomRotation);
+        bullet.gameObject.SetActive(true);
         Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
         bulletRigidbody.velocity = randomRotation * Vector3.forward * bulletSpeed;
     }
+
 }
