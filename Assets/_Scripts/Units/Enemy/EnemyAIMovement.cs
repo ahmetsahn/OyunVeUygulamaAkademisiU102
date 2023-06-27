@@ -6,7 +6,7 @@ public class EnemyAIMovement : MonoBehaviour
 {
     private NavMeshAgent agent;
     [SerializeField] private float walkRange = 10;
-
+    [SerializeField] private Transform playerTransform;
     [SerializeField] private float waitTime = 3.0f;
     private EnemyAnimation enemyAnimation;
     private float timer;
@@ -28,11 +28,12 @@ public class EnemyAIMovement : MonoBehaviour
         agent.SetDestination(transform.position);
         agent.isStopped = false;
         enemyAnimation.SetIdleState();
+        enemyAnimation.SetIdleRigHeight();
     }
 
     public void FreeMoveUpdate()
     {
-
+        
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
             enemyAnimation.SetIdleState();
@@ -111,11 +112,13 @@ public class EnemyAIMovement : MonoBehaviour
     {
         agent.isStopped = true;
         enemyAnimation.SetAttackState();
+        enemyAnimation.SetAimRigHeight();
     }
 
     public void AttackUpdate()
     {
-        transform.DOLookAt(enemy.playerTransform.position, 0.2f);
+        
+        transform.DOLookAt(playerTransform.position, 0.2f);
         PlayerInRangeControl();
     }
 

@@ -7,11 +7,12 @@ public class Enemy : MonoBehaviour
     public FreeState freeState = new();
     public AttackState attackState = new();
     private EnemyAIMovement enemyAIMovement;
-    [field: SerializeField] public Transform playerTransform { get; private set; }
+    private EnemyAttack enemyAttack;
 
     private void Awake()
     {
         enemyAIMovement = GetComponent<EnemyAIMovement>();
+        enemyAttack = GetComponent<EnemyAttack>();
     }
 
     private void Start()
@@ -48,7 +49,8 @@ public class Enemy : MonoBehaviour
 
     public void HandlerAttackUpdate()
     {
-        enemyAIMovement.AttackUpdate();    
+        enemyAIMovement.AttackUpdate();
+        enemyAttack.Attack();
     }
 
   

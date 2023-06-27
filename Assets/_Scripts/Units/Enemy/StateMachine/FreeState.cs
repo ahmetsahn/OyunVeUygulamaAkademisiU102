@@ -12,6 +12,7 @@ namespace EnemySystem
         public void UpdateState(Enemy enemy)
         {
             enemy.HandleFreeMovementUpdate();
+            
         }
     }
 }
