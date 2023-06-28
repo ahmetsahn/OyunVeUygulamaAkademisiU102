@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
+using ScriptableObjectArchitecture;
 
 public class EnemyAIMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class EnemyAIMovement : MonoBehaviour
     [SerializeField] private float waitTime = 3.0f;
     private EnemyAnimation enemyAnimation;
     private float timer;
+    [SerializeField] private BoolReference isPlayerDead;
 
     public float playerRange = 5f;
 
@@ -120,6 +122,11 @@ public class EnemyAIMovement : MonoBehaviour
         
         transform.DOLookAt(playerTransform.position, 0.2f);
         PlayerInRangeControl();
+
+        if(isPlayerDead.Value)
+        {
+            enemy.SetState(enemy.freeState);
+        }
     }
 
 
