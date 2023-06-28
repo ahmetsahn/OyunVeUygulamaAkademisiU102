@@ -11,6 +11,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] UnityEvent OnDeactiveAim;
     [SerializeField] private Transform debugTransform;
     
+    
     private Vector3 mouseWorldPosition;
 
     private BaseWeapon weapon;
@@ -56,33 +57,42 @@ public class ThirdPersonShooterController : MonoBehaviour
         if (starterAssetsInputs.aim)
         {
             OnActiveAim.Invoke();
-            float horizontal = Mathf.Lerp(animator.GetFloat("Horizontal"), starterAssetsInputs.move.x, 5 * Time.deltaTime);
-            float vertical = Mathf.Lerp(animator.GetFloat("Vertical"), starterAssetsInputs.move.y, 5 * Time.deltaTime);
-            animator.SetBool("Aim", true);
-            animator.SetFloat("Horizontal", horizontal);
-            animator.SetFloat("Vertical", vertical);
-            aimRig.weight = Mathf.Lerp(aimRig.weight, 1f, Time.deltaTime * 10f);
-            Vector3 worldAimTarget = mouseWorldPosition;
-            worldAimTarget.y = transform.position.y;
-            Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
-            transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
-            
-            if (starterAssetsInputs.shoot)
-            {
+            ActiveAim();
 
-                weapon.Shoot();
-                starterAssetsInputs.shoot = false;
-            }
-            
         }
-        
+
         else
         {
             OnDeactiveAim.Invoke();
-            animator.SetBool("Aim", false);
-            aimRig.weight = Mathf.Lerp(aimRig.weight, 0f, Time.deltaTime * 10f);
+            DeactiveAim();
         }
     }
 
-   
+    private void ActiveAim()
+    {
+        
+        float horizontal = Mathf.Lerp(animator.GetFloat("Horizontal"), starterAssetsInputs.move.x, 5 * Time.deltaTime);
+        float vertical = Mathf.Lerp(animator.GetFloat("Vertical"), starterAssetsInputs.move.y, 5 * Time.deltaTime);
+        animator.SetBool("Aim", true);
+        animator.SetFloat("Horizontal", horizontal);
+        animator.SetFloat("Vertical", vertical);
+        aimRig.weight = Mathf.Lerp(aimRig.weight, 1f, Time.deltaTime * 10f);
+        Vector3 worldAimTarget = mouseWorldPosition;
+        worldAimTarget.y = transform.position.y;
+        Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
+        transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
+
+        if (starterAssetsInputs.shoot)
+        {
+            weapon.Shoot();
+            starterAssetsInputs.shoot = false;
+        }
+    }
+
+    private void DeactiveAim()
+    {
+        animator.SetBool("Aim", false);
+        aimRig.weight = Mathf.Lerp(aimRig.weight, 0f, Time.deltaTime * 10f);
+    }
+
 }

@@ -6,6 +6,7 @@ public class EnemyAnimation : MonoBehaviour
     private Animator animator;
     [SerializeField] private Rig aimRig;
     [SerializeField] private Rig ýdleRig;
+  
 
     private void Awake()
     {
