@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private IEnemyState currentState;
+    private EnemyBaseState currentState;
     public FreeState freeState = new();
     public AttackState attackState = new();
+    public DeathState deathState = new();
     private EnemyAIMovement enemyAIMovement;
     private EnemyAttack enemyAttack;
+
 
     private void Awake()
     {
@@ -18,18 +20,18 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         currentState = freeState;
-        currentState.EnterState(this);
+        currentState?.EnterState(this);
     }
 
     private void Update()
     {
-        currentState.UpdateState(this);
+        currentState?.UpdateState(this);
     }
 
-    public void SetState(IEnemyState state)
+    public void SetState(EnemyBaseState state)
     {
         currentState = state;
-        currentState.EnterState(this);
+        currentState?.EnterState(this);
     }
 
     public void HandleFreeMovementEnter()
@@ -51,6 +53,11 @@ public class Enemy : MonoBehaviour
     {
         enemyAIMovement.AttackUpdate();
         enemyAttack.Attack();
+    }
+
+    public void HandlerDeathEnter()
+    {
+        enemyAIMovement.DeathEnter();
     }
 
   

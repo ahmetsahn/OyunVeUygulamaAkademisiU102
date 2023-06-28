@@ -2,14 +2,14 @@ using UnityEngine;
 
 namespace EnemySystem
 {
-    public class FreeState : IEnemyState
+    public class FreeState : EnemyBaseState
     {
-        public void EnterState(Enemy enemy)
+        public override void EnterState(Enemy enemy)
         {
             enemy.HandleFreeMovementEnter();
         }
 
-        public void UpdateState(Enemy enemy)
+        public override void UpdateState(Enemy enemy)
         {
             enemy.HandleFreeMovementUpdate();
             

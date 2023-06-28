@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
 using ScriptableObjectArchitecture;
+using System.Collections;
 
 public class EnemyAIMovement : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class EnemyAIMovement : MonoBehaviour
     private float timer;
     [SerializeField] private BoolReference isPlayerDead;
 
-    public float playerRange = 5f;
+    public float attackRange = 5f;
 
     private Enemy enemy;
     private bool playerInRange = false;
@@ -62,7 +63,7 @@ public class EnemyAIMovement : MonoBehaviour
 
     private void PlayerInRangeControl()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, playerRange);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange);
 
         bool playerDetected = false;
 
@@ -129,12 +130,28 @@ public class EnemyAIMovement : MonoBehaviour
         }
     }
 
+    public void DeathEnter()
+    {
+        enemyAnimation.PlayDeathAnimation();
+    }
+
+    public void DestroyEnemy()
+    {
+        StartCoroutine(DelayForDestroy());
+    }
+
+    IEnumerator DelayForDestroy()
+    {
+        yield return new WaitForSeconds(3f);
+        transform.DOMoveY(-1, 2).onComplete += () => Destroy(gameObject);
+    }
+
 
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, playerRange);
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
 

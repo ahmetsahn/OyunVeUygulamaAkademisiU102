@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    
-    
+
+    [SerializeField] private float damage;
     private Rigidbody bulletRigidbody;
 
     private void Awake() {
@@ -19,7 +19,12 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GetHitEffect();
-        
+
+        if (other.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
+        {
+            enemyHealth.TakeDamage(damage);
+        }
+
         BulletPool.Instance.ReturnToPool(this);
     }
 

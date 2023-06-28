@@ -2,18 +2,17 @@ using UnityEngine;
 
 namespace EnemySystem
 {
-    public class AttackState : IEnemyState
+    public class AttackState : EnemyBaseState
     {
-        public void EnterState(Enemy enemy)
+        public override void EnterState(Enemy enemy)
         {
             enemy.HandlerAttackEnter();    
         }
         
-        public void UpdateState(Enemy enemy)
+        public override void UpdateState(Enemy enemy)
         {
             enemy.HandlerAttackUpdate();
-
-            
+ 
         }
     }
 }

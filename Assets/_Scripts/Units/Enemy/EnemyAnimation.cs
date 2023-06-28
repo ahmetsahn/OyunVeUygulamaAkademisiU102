@@ -33,6 +33,12 @@ public class EnemyAnimation : MonoBehaviour
         animator.SetBool("IsAttacking", true);
     }
 
+    public void PlayDeathAnimation()
+    {
+        animator.SetTrigger("Death");
+        SetIdleRigHeight();
+    }
+
     public void SetAimRigHeight()
     {
         aimRig.weight = 1;

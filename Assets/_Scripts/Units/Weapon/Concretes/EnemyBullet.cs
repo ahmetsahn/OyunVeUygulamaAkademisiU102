@@ -16,6 +16,8 @@ public class EnemyBullet : MonoBehaviour
         {
             playerHealth.TakeDamage(damage);
         }
+
+        EnemyBulletPool.Instance.ReturnToPool(this);
     }
 
     IEnumerator ReturnToPoolDelay()

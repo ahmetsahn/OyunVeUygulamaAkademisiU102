@@ -1031,7 +1031,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: f0eb214f1c881a143b7e5fb980e23e19, type: 2}
-  playerRange: 10
+  attackRange: 20
 --- !u!114 &386197871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8925,7 +8925,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6d5ff5a8b24e91a4da9dde801183bc8f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d5ff5a8b24e91a4da9dde801183bc8f, type: 3}
@@ -10322,6 +10322,7 @@ GameObject:
   - component: {fileID: 5866666021977088228}
   - component: {fileID: 5866666021977088230}
   - component: {fileID: 5866666021977088229}
+  - component: {fileID: 5866666021977088231}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -10963,7 +10964,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.8
-  m_Radius: 0.28
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
@@ -15554,7 +15555,7 @@ MonoBehaviour:
   shootingInterval: 0.2
   bulletSpeed: 50
   spawnPoint: {fileID: 323073911}
-  randomAngleRange: 5
+  randomAngleRange: 1.7
 --- !u!114 &5866666021977088229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15659,6 +15660,26 @@ MonoBehaviour:
   - m_Rig: {fileID: 767092169}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &5866666021977088231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149087592482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c08feb78a0882f44869fb8999f10f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 542b3b2392594d047bb8c58aa74f4769, type: 2}
+  maxHealth:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 13d1ea12c893bc44faede97e437aace7, type: 2}
 --- !u!4 &5872241709648797637
 Transform:
   m_ObjectHideFlags: 0
@@ -17844,7 +17865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 101050, guid: 2c3055a11cb8f8540a181490a4c34b7c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 457962, guid: 2c3055a11cb8f8540a181490a4c34b7c, type: 3}
       propertyPath: m_RootOrder
@@ -19192,6 +19213,10 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: edfca72f3965f7a4d8195921e0140404, type: 2}
+  isPlayerDead:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: f0eb214f1c881a143b7e5fb980e23e19, type: 2}
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -19231,10 +19256,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  isPlayerDead:
-    _useConstant: 0
-    _constantValue: 0
-    _variable: {fileID: 11400000, guid: f0eb214f1c881a143b7e5fb980e23e19, type: 2}
 --- !u!114 &9197398093574804619
 MonoBehaviour:
   m_ObjectHideFlags: 0
