@@ -1,6 +1,7 @@
 using ScriptableObjectArchitecture;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI diamondCountText;
     [SerializeField] private IntReference currentDiamond;
+
+    [SerializeField] private Image healthBar;
+    [SerializeField] private FloatReference currentHealth;
+    [SerializeField] private FloatReference maxHealth;
 
     private void Start()
     {
@@ -20,6 +25,7 @@ public class UIManager : MonoBehaviour
     {
         bulletCountText.text = currentAmmo.Value.ToString() + " / 3";
         diamondCountText.text = currentDiamond.Value.ToString();
+        healthBar.fillAmount = currentHealth.Value / maxHealth.Value;
     }
 
 }

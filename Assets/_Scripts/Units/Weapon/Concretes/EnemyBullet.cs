@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    [SerializeField] private float damage = 10f;
+
     private void Start()
     {
         StartCoroutine(ReturnToPoolDelay());
@@ -10,9 +12,9 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.TryGetComponent(out PlayerHealth playerHealth))
         {
-            EnemyBulletPool.Instance.ReturnToPool(this);
+            playerHealth.TakeDamage(damage);
         }
     }
 
