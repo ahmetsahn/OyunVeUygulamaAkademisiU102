@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public Transform target; // Hedef nesne (sizin karakteriniz)
-    public float shootingInterval = 1f; // Ateþ aralýðý
-    public float bulletSpeed = 50f; // Mermi hýzý
-    public Transform spawnPoint; // Mermi prefabý
+    [SerializeField] private Transform target; // Hedef nesne (sizin karakteriniz)
+    [SerializeField] private float shootingInterval = 1f; // Ateþ aralýðý
+    [SerializeField] private float bulletSpeed = 50f; // Mermi hýzý
+    [SerializeField] private Transform spawnPoint; // Mermi prefabý
     [SerializeField][Range(0, 20f)] private float randomAngleRange;
+    [SerializeField] private AudioClip shootSound;
     private float nextShotTime;
-
+    private AudioSource audioSource;
     
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+
     public void Attack()
     {
         if (target != null && CanShoot())
@@ -27,6 +35,12 @@ public class EnemyAttack : MonoBehaviour
     private void Shoot()
     {
         GetBullet();
+        PlayShootSound();
+    }
+
+    private void PlayShootSound()
+    {
+        audioSource.PlayOneShot(shootSound);
     }
         
 

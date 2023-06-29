@@ -6,16 +6,15 @@ using System.Collections;
 
 public class EnemyAIMovement : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    
     [SerializeField] private float walkRange = 10;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float waitTime = 3.0f;
+    [SerializeField] private BoolReference isPlayerDead;
+    [SerializeField] private float attackRange = 5f;
     private EnemyAnimation enemyAnimation;
     private float timer;
-    [SerializeField] private BoolReference isPlayerDead;
-
-    public float attackRange = 5f;
-
+    private NavMeshAgent agent;
     private Enemy enemy;
     private bool playerInRange = false;
 

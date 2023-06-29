@@ -12,12 +12,8 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private Transform debugTransform;
     
     private Vector3 mouseWorldPosition;
-
     private BaseWeapon weapon;
-
-
     private StarterAssetsInputs starterAssetsInputs;
-
     private Animator animator;
 
 
