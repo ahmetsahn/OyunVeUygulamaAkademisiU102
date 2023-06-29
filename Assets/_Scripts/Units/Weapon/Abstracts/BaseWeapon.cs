@@ -8,4 +8,9 @@ public abstract class BaseWeapon : MonoBehaviour
     {
         
     }
+
+    public virtual void PlayShootSound()
+    {
+
+    }
 }

@@ -11,7 +11,6 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] UnityEvent OnDeactiveAim;
     [SerializeField] private Transform debugTransform;
     
-    
     private Vector3 mouseWorldPosition;
 
     private BaseWeapon weapon;
@@ -85,6 +84,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         if (starterAssetsInputs.shoot)
         {
             weapon.Shoot();
+            weapon.PlayShootSound();
             starterAssetsInputs.shoot = false;
         }
     }
