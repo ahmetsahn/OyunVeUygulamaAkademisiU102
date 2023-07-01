@@ -3,19 +3,17 @@ using UnityEngine;
 
 public class RiffleWeapon : BaseWeapon
 {
-    
+    [SerializeField] private int damage = 10;
+
     public override void Shoot()
     {
-        GetBullet();
+        if (MousePosition.Instance.GetMousePos() != Vector3.zero)
+        {
+            if (MousePosition.Instance.hit.collider.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
+            {
+                enemyHealth.TakeDamage(damage);
+            }
+        }
     }
 
-    private void GetBullet()
-    {
-        Vector3 aimDir = (MousePosition.Instance.GetMousePos() - spawnBulletPosition.position).normalized;
-        var bullet = BulletPool.Instance.Get();
-        bullet.transform.SetPositionAndRotation(spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
-        bullet.gameObject.SetActive(true);
-    }
-
-   
 }

@@ -2,9 +2,9 @@ using UnityEngine;
 
 public abstract class BaseWeapon : MonoBehaviour
 {
-    [SerializeField] protected Transform spawnBulletPosition;
-    [SerializeField] private AudioClip ShootSound;
-    protected AudioSource audioSource;
+    [SerializeField] private GameObject shootEffect;
+    [SerializeField] private AudioClip shootSound;
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -16,8 +16,14 @@ public abstract class BaseWeapon : MonoBehaviour
         
     }
 
-    public virtual void PlayShootSound()
+    public void PlayShootSound()
     {
-        audioSource.PlayOneShot(ShootSound);
+        audioSource.PlayOneShot(shootSound);
+    }
+
+    public virtual void PlayShootEffect()
+    {
+        shootEffect.SetActive(false);
+        shootEffect.SetActive(true);
     }
 }

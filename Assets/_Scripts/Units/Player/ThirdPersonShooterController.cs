@@ -7,11 +7,10 @@ using UnityEngine.Events;
 public class ThirdPersonShooterController : MonoBehaviour
 {
     [SerializeField] private Rig aimRig;
+    [SerializeField] private Transform aimTargetTranform;
     [SerializeField] UnityEvent OnActiveAim;
     [SerializeField] UnityEvent OnDeactiveAim;
-    [SerializeField] private Transform debugTransform;
     
-    private Vector3 mouseWorldPosition;
     private BaseWeapon weapon;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
@@ -31,20 +30,14 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit();
+        SetAimTargetTransform();
         Aim();
 
     }
 
-    private void RaycastHit()
+    private void SetAimTargetTransform()
     {
-        Vector2 screenCenterPoint = new(Screen.width / 2, Screen.height / 2);
-        Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
-        if (Physics.Raycast(ray, out RaycastHit hit, 999f))
-        {
-            mouseWorldPosition = hit.point;
-            debugTransform.position = hit.point;
-        }
+        aimTargetTranform.position = MousePosition.Instance.GetMousePos();
     }
 
     private void Aim()
@@ -72,7 +65,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
         aimRig.weight = Mathf.Lerp(aimRig.weight, 1f, Time.deltaTime * 10f);
-        Vector3 worldAimTarget = mouseWorldPosition;
+        Vector3 worldAimTarget = aimTargetTranform.position;
         worldAimTarget.y = transform.position.y;
         Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
         transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
@@ -81,6 +74,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             weapon.Shoot();
             weapon.PlayShootSound();
+            weapon.PlayShootEffect();
             starterAssetsInputs.shoot = false;
         }
     }

@@ -27,13 +27,13 @@ public class MousePosition : Singleton<MousePosition>
     {
         Gizmos.color = Color.red;
 
-        // Raycast ýþýnýnýzýn baþlangýç noktasý
+        
         Vector3 raycastStartPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 
-        // Raycast ýþýný uzunluðunu belirleyin, burada 9999f kullanýlmýþtýr
+        
         Vector3 raycastEndPoint = raycastStartPoint + Camera.main.transform.forward * 9999f;
 
-        // Iþýný çizmek için Gizmos.DrawLine kullanýn
+        
         Gizmos.DrawLine(raycastStartPoint, raycastEndPoint);
 
     }

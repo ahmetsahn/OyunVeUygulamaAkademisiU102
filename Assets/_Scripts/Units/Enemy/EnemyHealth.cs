@@ -19,11 +19,19 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth.Value -= damage;
+        GetHitEffect();
 
         if (currentHealth.Value <= 0)
         {
             enemy.SetState(enemy.deathState);
         }
 
+    }
+
+    private void GetHitEffect()
+    {
+        var hitEffect = HitEffectPool.Instance.Get();
+        hitEffect.transform.position = MousePosition.Instance.GetMousePos();
+        hitEffect.gameObject.SetActive(true);
     }
 }
