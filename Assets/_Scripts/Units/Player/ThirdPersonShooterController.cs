@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class ThirdPersonShooterController : MonoBehaviour
 {
-    [SerializeField] private Rig aimRig;
+    
     [SerializeField] private Transform aimTargetTranform;
     [SerializeField] UnityEvent OnActiveAim;
     [SerializeField] UnityEvent OnDeactiveAim;
@@ -32,7 +32,6 @@ public class ThirdPersonShooterController : MonoBehaviour
     {
         SetAimTargetTransform();
         Aim();
-
     }
 
     private void SetAimTargetTransform()
@@ -64,7 +63,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         animator.SetBool("Aim", true);
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
-        aimRig.weight = Mathf.Lerp(aimRig.weight, 1f, Time.deltaTime * 10f);
+        weapon.SetWeaponAimRigActive();
         Vector3 worldAimTarget = aimTargetTranform.position;
         worldAimTarget.y = transform.position.y;
         Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
@@ -82,7 +81,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     private void DeactiveAim()
     {
         animator.SetBool("Aim", false);
-        aimRig.weight = Mathf.Lerp(aimRig.weight, 0f, Time.deltaTime * 10f);
+        weapon.SetWeaponAimRigDeactive();
     }
 
 }

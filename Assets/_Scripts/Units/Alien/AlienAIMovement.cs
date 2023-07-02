@@ -110,11 +110,12 @@ public class AlienAIMovement : MonoBehaviour
         
         transform.DOLookAt(GameObject.Find("Player").transform.position, 0.9f);
         alienAnimation.SetGoInsideGunState();
+        transform.DOScale(0.2f, 0.5f);
         transform.DOMove(GameObject.Find("FirePoint").transform.position, 0.9f).onComplete += () =>
         {
             AlienPool.Instance.ReturnToPool(alien);
         }; 
-        transform.DOScale(0.2f, 0.5f);
+        
 
     }
 
