@@ -110,9 +110,11 @@ https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=990311782857
 
 
 - **Sprint Review**: 
-Oyunda uzaylılara maden mekaniği özellikleri eklendi.Maden bölgesini koruyan yapay zekalar eklendi. Silah değiştirme özelliği eklendi. Sprint Review katılımcıları: Roşna Sarıkaş, Ahmet Öztürk Şahin, Ali Uzunkaya
-• Projenin bitişi için planlama yapıldı• Projeyi hızlandırma kararı alınmıştır. • Projede değerlendirme için artı puan olacak noktalar arasından seçimler yapıldı.
+Oyunda uzaylılara maden mekaniği özellikleri eklendi.
+Maden bölgesini koruyan yapay zekalar eklendi.
+Silah değiştirme özelliği eklendi.
 Sprint Review katılımcıları: Roşna Sarıkaş, Ahmet Öztürk Şahin, Ali Uzunkaya
+
 
 - **Sprint Retrospective:**
   •Projenin bitişi için planlama yapıldı
