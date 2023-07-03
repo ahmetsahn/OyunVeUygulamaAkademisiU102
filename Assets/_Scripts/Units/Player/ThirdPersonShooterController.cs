@@ -11,8 +11,8 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private Transform aimTargetTranform;
     [SerializeField] UnityEvent OnActiveAim;
     [SerializeField] UnityEvent OnDeactiveAim;
-    
     [SerializeField] private BaseWeapon[] weapons;
+    [SerializeField] private GameObject[] weaponsUIPanel;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
 
@@ -90,12 +90,13 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     private void SwapWeapon()
     {
-       
+        weaponsUIPanel[currentWeaponIndex].SetActive(false);
         weapons[currentWeaponIndex].gameObject.SetActive(false);
         currentWeaponIndex = (currentWeaponIndex + 1) % weapons.Length;
         starterAssetsInputs.swapWeapon = false;
         weapons[currentWeaponIndex].gameObject.SetActive(true);
-        
+        weaponsUIPanel[currentWeaponIndex].SetActive(true);
+
     }
 
     

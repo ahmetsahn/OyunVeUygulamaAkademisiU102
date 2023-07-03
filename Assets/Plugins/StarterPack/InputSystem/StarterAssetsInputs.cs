@@ -15,8 +15,9 @@ namespace StarterAssets
 		public bool aim;
 		public bool shoot;
 		public bool swapWeapon;
+        public bool enterShip;
 
-		[Header("Movement Settings")]
+        [Header("Movement Settings")]
 		public bool analogMovement;
 
 		[Header("Mouse Cursor Settings")]
@@ -61,6 +62,11 @@ namespace StarterAssets
         {
             SwapWeaponInput(value.isPressed);
         }
+
+        public void OnEnterShip(InputValue value)
+        {
+            EnterShipInput(value.isPressed);
+        }
 #endif
 
 
@@ -99,6 +105,11 @@ namespace StarterAssets
             swapWeapon = newSwapWeaponState;
         }
 
+        public void EnterShipInput(bool newEnterShipState)
+		{
+            enterShip = newEnterShipState;
+        }
+
             private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
@@ -108,6 +119,8 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
+
+        
 	}
 	
 }
