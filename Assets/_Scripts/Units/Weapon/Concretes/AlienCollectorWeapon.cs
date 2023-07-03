@@ -16,6 +16,8 @@ public class AlienCollectorWeapon : BaseWeapon
                 {
                     currentAmmo.Value++;
                     MousePosition.Instance.hit.collider.gameObject.GetComponent<Alien>().HandleGoInsideGunMovement();
+                    PlayShootSound();
+                    PlayShootEffect();
                 }
             }
 

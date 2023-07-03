@@ -4,7 +4,7 @@ using UnityEngine.Animations.Rigging;
 public abstract class BaseWeapon : MonoBehaviour
 {
     [SerializeField] private Rig aimRig;
-    [SerializeField] private GameObject shootEffect;
+    [SerializeField] private ParticleSystem shootEffect;
     [SerializeField] private AudioClip shootSound;
     private AudioSource audioSource;
 
@@ -25,8 +25,7 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public void PlayShootEffect()
     {
-        shootEffect.SetActive(false);
-        shootEffect.SetActive(true);
+        shootEffect.Play();
     }
 
     public void SetWeaponAimRigActive()

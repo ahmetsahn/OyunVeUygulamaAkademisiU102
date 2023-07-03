@@ -348,7 +348,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -5373,7 +5373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimRig: {fileID: 7899490077688630038}
-  shootEffect: {fileID: 2087317678}
+  shootEffect: {fileID: 2101766606}
   shootSound: {fileID: 8300000, guid: 62a9a4d7d6b6f644e9e2af2a1d18f67f, type: 3}
   damage: 10
 --- !u!1 &157805965
@@ -6578,7 +6578,7 @@ PrefabInstance:
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.13
+      value: 4.46
       objectReference: {fileID: 0}
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
@@ -6588,7 +6588,7 @@ PrefabInstance:
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.68
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
@@ -6656,7 +6656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751769901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.001, y: 0.0964, z: -0.3697}
+  m_LocalPosition: {x: -0.017, y: 0.066, z: -0.313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6725,7 +6725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &802678957
 Transform:
   m_ObjectHideFlags: 0
@@ -16945,7 +16945,7 @@ PrefabInstance:
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.91
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
@@ -16955,7 +16955,7 @@ PrefabInstance:
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
@@ -17020,7 +17020,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1094677915
 Transform:
   m_ObjectHideFlags: 0
@@ -17029,7 +17029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094677914}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -15.54, y: 0, z: 8.13}
+  m_LocalPosition: {x: -11.55, y: 0, z: -2.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17060,7 +17060,7 @@ PrefabInstance:
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.69
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
@@ -17070,7 +17070,7 @@ PrefabInstance:
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.68
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
@@ -17356,7 +17356,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -22269,7 +22269,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -38125,7 +38125,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -43038,7 +43038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1831581757
 Transform:
   m_ObjectHideFlags: 0
@@ -43148,7 +43148,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -58113,7 +58113,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -62944,7 +62944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2087611520
 Transform:
   m_ObjectHideFlags: 0
@@ -63132,7 +63132,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -67873,7 +67873,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -72614,7 +72614,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -77355,7 +77355,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -82096,7 +82096,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -86837,7 +86837,7 @@ ParticleSystem:
   emitterVelocityMode: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -98027,8 +98027,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimRig: {fileID: 1494243100}
-  shootEffect: {fileID: 1831581756}
-  shootSound: {fileID: 8300000, guid: 62a9a4d7d6b6f644e9e2af2a1d18f67f, type: 3}
+  shootEffect: {fileID: 1831581759}
+  shootSound: {fileID: 8300000, guid: 6da6c267e159c4045af7e8af092837bf, type: 3}
   currentAmmo:
     _useConstant: 0
     _constantValue: 0
@@ -100464,7 +100464,7 @@ PrefabInstance:
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.37
+      value: -2.61
       objectReference: {fileID: 0}
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
@@ -100474,7 +100474,7 @@ PrefabInstance:
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2583103661580394108, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}

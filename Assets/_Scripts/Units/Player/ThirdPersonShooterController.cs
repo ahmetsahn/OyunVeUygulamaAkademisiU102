@@ -78,8 +78,6 @@ public class ThirdPersonShooterController : MonoBehaviour
         if (starterAssetsInputs.shoot)
         {
             weapons[currentWeaponIndex].Shoot();
-            weapons[currentWeaponIndex].PlayShootSound();
-            weapons[currentWeaponIndex].PlayShootEffect();
             starterAssetsInputs.shoot = false;
         }
     }
