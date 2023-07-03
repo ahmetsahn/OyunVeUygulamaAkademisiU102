@@ -3,6 +3,7 @@ using Cinemachine;
 using StarterAssets;
 using UnityEngine.Animations.Rigging;
 using UnityEngine.Events;
+using Unity.VisualScripting;
 
 public class ThirdPersonShooterController : MonoBehaviour
 {
@@ -11,16 +12,16 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] UnityEvent OnActiveAim;
     [SerializeField] UnityEvent OnDeactiveAim;
     
-    private BaseWeapon weapon;
+    [SerializeField] private BaseWeapon[] weapons;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
+
+    private int currentWeaponIndex = 0;
 
 
 
     private void Awake()
     {
-        
-        weapon = GetComponentInChildren<BaseWeapon>();
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         animator = GetComponent<Animator>();
     }
@@ -32,6 +33,11 @@ public class ThirdPersonShooterController : MonoBehaviour
     {
         SetAimTargetTransform();
         Aim();
+
+        if (starterAssetsInputs.swapWeapon)
+        {
+            SwapWeapon();
+        }
     }
 
     private void SetAimTargetTransform()
@@ -63,7 +69,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         animator.SetBool("Aim", true);
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
-        weapon.SetWeaponAimRigActive();
+        weapons[currentWeaponIndex].SetWeaponAimRigActive();
         Vector3 worldAimTarget = aimTargetTranform.position;
         worldAimTarget.y = transform.position.y;
         Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
@@ -71,9 +77,9 @@ public class ThirdPersonShooterController : MonoBehaviour
 
         if (starterAssetsInputs.shoot)
         {
-            weapon.Shoot();
-            weapon.PlayShootSound();
-            weapon.PlayShootEffect();
+            weapons[currentWeaponIndex].Shoot();
+            weapons[currentWeaponIndex].PlayShootSound();
+            weapons[currentWeaponIndex].PlayShootEffect();
             starterAssetsInputs.shoot = false;
         }
     }
@@ -81,7 +87,19 @@ public class ThirdPersonShooterController : MonoBehaviour
     private void DeactiveAim()
     {
         animator.SetBool("Aim", false);
-        weapon.SetWeaponAimRigDeactive();
+        weapons[currentWeaponIndex].SetWeaponAimRigDeactive();
     }
+
+    private void SwapWeapon()
+    {
+       
+        weapons[currentWeaponIndex].gameObject.SetActive(false);
+        currentWeaponIndex = (currentWeaponIndex + 1) % weapons.Length;
+        starterAssetsInputs.swapWeapon = false;
+        weapons[currentWeaponIndex].gameObject.SetActive(true);
+        
+    }
+
+    
 
 }

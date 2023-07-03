@@ -98013,7 +98013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &919132148537436021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98704,6 +98704,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  weapons:
+  - {fileID: 919132148537436021}
+  - {fileID: 137316139}
 --- !u!114 &1388190117643583079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101206,6 +101209,7 @@ MonoBehaviour:
   sprint: 0
   aim: 0
   shoot: 0
+  swapWeapon: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -106254,7 +106258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 101050, guid: 2c3055a11cb8f8540a181490a4c34b7c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 457962, guid: 2c3055a11cb8f8540a181490a4c34b7c, type: 3}
       propertyPath: m_RootOrder
