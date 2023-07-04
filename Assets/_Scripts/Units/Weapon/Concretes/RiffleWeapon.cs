@@ -32,20 +32,26 @@ public class RiffleWeapon : BaseWeapon
 
         else
         {
-           if(totalBulletCount.Value>=30)
-            {
-                currentBulletCount.Value += 30;
-                totalBulletCount.Value -= 30;
-            }
-
-           else
-            {
-                currentBulletCount.Value += totalBulletCount.Value;
-                totalBulletCount.Value = 0;
-            }
+           
         }
 
        
+    }
+
+    public override void UpdateBulletCount()
+    {
+        if (totalBulletCount.Value >= 30)
+        {
+            int difference = 30 - currentBulletCount.Value;
+            currentBulletCount.Value += difference;
+            totalBulletCount.Value -= difference;
+        }
+
+        else
+        {
+            currentBulletCount.Value += totalBulletCount.Value;
+            totalBulletCount.Value = 0;
+        }
     }
 
 }

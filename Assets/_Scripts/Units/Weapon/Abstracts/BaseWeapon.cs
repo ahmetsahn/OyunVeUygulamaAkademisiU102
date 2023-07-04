@@ -39,4 +39,9 @@ public abstract class BaseWeapon : MonoBehaviour
     {
         aimRig.weight = Mathf.Lerp(aimRig.weight, 0f, Time.deltaTime * 10f);
     }
+
+    public virtual void UpdateBulletCount()
+    {
+
+    }
 }
