@@ -4,32 +4,35 @@ using UnityEngine.InputSystem;
 
 public class ShipMovement : MonoBehaviour
 {
-    public float hareketHizi = 5f;
-    public float donusHizi = 3f;
-
+    [SerializeField] private float upThrust;
+    private float upDown;
     private Rigidbody rb;
-    private Vector2 hareketInput;
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Vector3 hareket = new Vector3(hareketInput.x, 0f, hareketInput.y) * hareketHizi * Time.deltaTime;
-        rb.MovePosition(transform.position + hareket);
+        HandleMovement();
+    }
 
-        if (hareket != Vector3.zero)
+    private void HandleMovement()
+    {
+        if (upDown > 0.1f || upDown < -0.1f)
         {
-            Quaternion yeniRotasyon = Quaternion.LookRotation(hareket);
-            rb.MoveRotation(Quaternion.Slerp(rb.rotation, yeniRotasyon, donusHizi * Time.deltaTime));
+            rb.AddRelativeForce(Vector3.up * upDown * upThrust * Time.fixedDeltaTime);
+        }
+
+        else
+        {
+            rb.AddRelativeForce(Vector3.up * upDown * upThrust * Time.fixedDeltaTime);
         }
     }
-
-    public void OnHareketInput(InputAction.CallbackContext context)
+    
+    public void OnUpDown(InputAction.CallbackContext context)
     {
-        hareketInput = context.ReadValue<Vector2>();
-    }
-
+        upDown = context.ReadValue<float>();
+    } 
 }

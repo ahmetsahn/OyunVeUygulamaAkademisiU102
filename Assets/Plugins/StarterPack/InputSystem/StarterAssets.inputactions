@@ -342,6 +342,56 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "ShipControl",
+            "id": "cc8382ee-64c4-43d0-a5ce-9862b9498a5c",
+            "actions": [
+                {
+                    "name": "UpDown",
+                    "type": "Button",
+                    "id": "2f017c49-2b85-4497-8ade-8837e03ed484",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "UpDownKB",
+                    "id": "19ca582b-f454-4ffa-898d-e05c627a73e8",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "7cfc0fff-67ee-4a27-b345-ea7798c672d7",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "48034585-6d19-4d02-9514-a1d9560b6702",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
         }
     ],
     "controlSchemes": [
