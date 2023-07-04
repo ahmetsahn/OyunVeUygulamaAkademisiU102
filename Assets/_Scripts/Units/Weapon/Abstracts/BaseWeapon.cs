@@ -8,6 +8,8 @@ public abstract class BaseWeapon : MonoBehaviour
     [SerializeField] private AudioClip shootSound;
     private AudioSource audioSource;
 
+    public bool canReload;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();

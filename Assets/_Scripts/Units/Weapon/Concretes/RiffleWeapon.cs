@@ -8,6 +8,11 @@ public class RiffleWeapon : BaseWeapon
     [SerializeField] private IntReference currentBulletCount;
     [SerializeField] private IntReference totalBulletCount;
 
+    private void Start()
+    {
+        canReload = true;
+    }
+
     public override void Shoot()
     {
         if(currentBulletCount.Value>0)

@@ -40,9 +40,21 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             animator.SetTrigger("SwapWeapon");
             starterAssetsInputs.swapWeapon = false;
+            starterAssetsInputs.AimInput(false);
         }
 
-        ReloadBullet();
+        if (starterAssetsInputs.reloadBullet && weapons[currentWeaponIndex].canReload)
+        {
+            ReloadBullet();
+            starterAssetsInputs.reloadBullet = false;
+        }
+
+        else
+        {
+            starterAssetsInputs.reloadBullet = false;
+        }
+
+        
     }
 
     private void SetAimTargetTransform()
@@ -106,15 +118,8 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     private void ReloadBullet()
     {
-        if (starterAssetsInputs.reloadBullet)
-        {
-           
-            animator.SetTrigger("Reload");
-            
-
-            starterAssetsInputs.reloadBullet = false;
-            starterAssetsInputs.AimInput(false);
-        }
+        animator.SetTrigger("Reload");
+        starterAssetsInputs.AimInput(false);
     }
 
     
