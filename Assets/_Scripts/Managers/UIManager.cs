@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI bulletCountText;
-    [SerializeField] private IntReference currentAmmo;
+    [SerializeField] private TextMeshProUGUI collectorBulletCountText;
+    [SerializeField] private IntReference currentCollectorBulletCount;
+
+    [SerializeField] private TextMeshProUGUI riffleBulletCountText;
+    [SerializeField] private IntReference currentRiffleBulletCount;
+    [SerializeField] private IntReference totalRiffleBulletCount;
 
     [SerializeField] private TextMeshProUGUI diamondCountText;
     [SerializeField] private IntReference currentDiamond;
@@ -17,13 +21,16 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        currentAmmo.Value = 0;
+        currentCollectorBulletCount.Value = 0;
+        currentRiffleBulletCount.Value = 30;
+        totalRiffleBulletCount.Value = 120;
         currentDiamond.Value = 0;
     }
 
     private void Update()
     {
-        bulletCountText.text = currentAmmo.Value.ToString() + " / 3";
+        collectorBulletCountText.text = currentCollectorBulletCount.Value.ToString() + " / 3";
+        riffleBulletCountText.text = currentRiffleBulletCount.Value.ToString() + " / " + totalRiffleBulletCount.Value.ToString();
         diamondCountText.text = currentDiamond.Value.ToString();
         healthBar.fillAmount = currentHealth.Value / maxHealth.Value;
     }

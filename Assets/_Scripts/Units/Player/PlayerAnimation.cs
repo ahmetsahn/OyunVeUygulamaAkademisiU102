@@ -13,4 +13,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         animator.SetTrigger("Death");
     }
+
+    
 }

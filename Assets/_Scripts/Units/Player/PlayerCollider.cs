@@ -6,6 +6,7 @@ public class PlayerCollider : MonoBehaviour
 {
     [SerializeField] private UnityEvent OnTriggerEnterShipArea;
     [SerializeField] private UnityEvent OnTriggerStayShipAreaPressF;
+    [SerializeField] private UnityEvent OnTriggerExitShipArea;
     private StarterAssetsInputs inputs;
 
     private void Awake()
@@ -31,6 +32,14 @@ public class PlayerCollider : MonoBehaviour
                 Camera.main.GetComponent<Cinemachine.CinemachineBrain>().m_DefaultBlend.m_Time = 2;
                 OnTriggerStayShipAreaPressF.Invoke();
             }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("ShipTriggerZone"))
+        {
+            OnTriggerExitShipArea.Invoke();
         }
     }
 }

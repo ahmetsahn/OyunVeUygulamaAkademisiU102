@@ -16,6 +16,7 @@ namespace StarterAssets
 		public bool shoot;
 		public bool swapWeapon;
         public bool enterShip;
+        public bool reloadBullet;
 
         [Header("Movement Settings")]
 		public bool analogMovement;
@@ -67,6 +68,13 @@ namespace StarterAssets
         {
             EnterShipInput(value.isPressed);
         }
+
+        public void OnReloadBullet(InputValue value)
+        {
+            ReloadBulletInput(value.isPressed);
+        }
+
+
 #endif
 
 
@@ -108,6 +116,11 @@ namespace StarterAssets
         public void EnterShipInput(bool newEnterShipState)
 		{
             enterShip = newEnterShipState;
+        }
+
+        public void ReloadBulletInput(bool newReloadBulletState)
+		{
+            reloadBullet = newReloadBulletState;
         }
 
             private void OnApplicationFocus(bool hasFocus)

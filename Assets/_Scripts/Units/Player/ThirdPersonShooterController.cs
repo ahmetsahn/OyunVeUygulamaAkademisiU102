@@ -15,6 +15,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private GameObject[] weaponsUIPanel;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
+    private PlayerAnimation playerAnimation;
 
     private int currentWeaponIndex = 0;
 
@@ -23,6 +24,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     private void Awake()
     {
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
+        playerAnimation = GetComponent<PlayerAnimation>();
         animator = GetComponent<Animator>();
     }
 
@@ -38,6 +40,8 @@ public class ThirdPersonShooterController : MonoBehaviour
         {
             SwapWeapon();
         }
+
+        ReloadBullet();
     }
 
     private void SetAimTargetTransform()
@@ -56,6 +60,7 @@ public class ThirdPersonShooterController : MonoBehaviour
 
         else
         {
+            
             OnDeactiveAim.Invoke();
             DeactiveAim();
         }
@@ -97,6 +102,16 @@ public class ThirdPersonShooterController : MonoBehaviour
         weapons[currentWeaponIndex].gameObject.SetActive(true);
         weaponsUIPanel[currentWeaponIndex].SetActive(true);
 
+    }
+
+    private void ReloadBullet()
+    {
+        if (starterAssetsInputs.reloadBullet)
+        {
+            animator.SetTrigger("Reload");
+            starterAssetsInputs.reloadBullet = false;
+            starterAssetsInputs.AimInput(false);
+        }
     }
 
     
