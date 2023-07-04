@@ -6,7 +6,7 @@ public abstract class BaseWeapon : MonoBehaviour
     [SerializeField] private Rig aimRig;
     [SerializeField] private ParticleSystem shootEffect;
     [SerializeField] private AudioClip shootSound;
-    private AudioSource audioSource;
+    protected AudioSource audioSource;
 
     public bool canReload;
 
@@ -43,5 +43,15 @@ public abstract class BaseWeapon : MonoBehaviour
     public virtual void UpdateBulletCount()
     {
 
+    }
+
+    public virtual void PlayReloadSound()
+    {
+        
+    }
+
+    public virtual void PlayEmptySound()
+    {
+        
     }
 }

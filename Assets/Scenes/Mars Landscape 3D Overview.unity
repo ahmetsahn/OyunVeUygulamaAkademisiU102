@@ -5451,15 +5451,26 @@ MonoBehaviour:
   aimRig: {fileID: 7899490077688630038}
   shootEffect: {fileID: 2101766606}
   shootSound: {fileID: 8300000, guid: 62a9a4d7d6b6f644e9e2af2a1d18f67f, type: 3}
+  canReload: 0
   damage: 10
   currentBulletCount:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 4be2634c9e67a094d8b17e957499f9d0, type: 2}
+  magazineBulletCapacity:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: e051c52677014c145ac79ba2ad009403, type: 2}
   totalBulletCount:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 9e8f33176ed6d17479638351553f2773, type: 2}
+  totalBulletCapacity:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 410708911355414469ac47a2357e05fb, type: 2}
+  reloadSound: {fileID: 8300000, guid: 6181210468e252f448f74afa5343b6e2, type: 3}
+  emptySound: {fileID: 8300000, guid: 1745415acb162514a8a68d3c73e6efa8, type: 3}
 --- !u!1 &157805965
 GameObject:
   m_ObjectHideFlags: 0
@@ -18962,10 +18973,18 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 4be2634c9e67a094d8b17e957499f9d0, type: 2}
+  magazineBulletCapacity:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: e051c52677014c145ac79ba2ad009403, type: 2}
   totalRiffleBulletCount:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 9e8f33176ed6d17479638351553f2773, type: 2}
+  totalRiffleBulletCapacity:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 410708911355414469ac47a2357e05fb, type: 2}
   diamondCountText: {fileID: 119333760}
   currentDiamond:
     _useConstant: 0
@@ -104101,6 +104120,7 @@ MonoBehaviour:
   aimRig: {fileID: 1494243100}
   shootEffect: {fileID: 1831581759}
   shootSound: {fileID: 8300000, guid: 6da6c267e159c4045af7e8af092837bf, type: 3}
+  canReload: 0
   currentAmmo:
     _useConstant: 0
     _constantValue: 0

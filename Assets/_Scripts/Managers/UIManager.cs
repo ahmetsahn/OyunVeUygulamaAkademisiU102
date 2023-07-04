@@ -10,7 +10,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI riffleBulletCountText;
     [SerializeField] private IntReference currentRiffleBulletCount;
+    [SerializeField] private IntReference magazineBulletCapacity;
     [SerializeField] private IntReference totalRiffleBulletCount;
+    [SerializeField] private IntReference totalRiffleBulletCapacity;
 
     [SerializeField] private TextMeshProUGUI diamondCountText;
     [SerializeField] private IntReference currentDiamond;
@@ -22,8 +24,8 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         currentCollectorBulletCount.Value = 0;
-        currentRiffleBulletCount.Value = 30;
-        totalRiffleBulletCount.Value = 120;
+        currentRiffleBulletCount.Value = magazineBulletCapacity.Value;
+        totalRiffleBulletCount.Value = totalRiffleBulletCapacity.Value;
         currentDiamond.Value = 0;
     }
 

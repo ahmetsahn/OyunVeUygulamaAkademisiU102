@@ -45,6 +45,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         if (starterAssetsInputs.reloadBullet && weapons[currentWeaponIndex].canReload)
         {
             ReloadBullet();
+            weapons[currentWeaponIndex].PlayReloadSound();
             starterAssetsInputs.reloadBullet = false;
         }
 
