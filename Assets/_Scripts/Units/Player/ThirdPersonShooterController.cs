@@ -38,7 +38,8 @@ public class ThirdPersonShooterController : MonoBehaviour
 
         if (starterAssetsInputs.swapWeapon)
         {
-            SwapWeapon();
+            animator.SetTrigger("SwapWeapon");
+            starterAssetsInputs.swapWeapon = false;
         }
 
         ReloadBullet();
@@ -93,12 +94,11 @@ public class ThirdPersonShooterController : MonoBehaviour
         weapons[currentWeaponIndex].SetWeaponAimRigDeactive();
     }
 
-    private void SwapWeapon()
+    public void SwapWeapon()
     {
         weaponsUIPanel[currentWeaponIndex].SetActive(false);
         weapons[currentWeaponIndex].gameObject.SetActive(false);
         currentWeaponIndex = (currentWeaponIndex + 1) % weapons.Length;
-        starterAssetsInputs.swapWeapon = false;
         weapons[currentWeaponIndex].gameObject.SetActive(true);
         weaponsUIPanel[currentWeaponIndex].SetActive(true);
 
@@ -108,7 +108,10 @@ public class ThirdPersonShooterController : MonoBehaviour
     {
         if (starterAssetsInputs.reloadBullet)
         {
+           
             animator.SetTrigger("Reload");
+            
+
             starterAssetsInputs.reloadBullet = false;
             starterAssetsInputs.AimInput(false);
         }
