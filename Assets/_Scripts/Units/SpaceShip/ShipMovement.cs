@@ -2,6 +2,7 @@ using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] private float upThrust;
     [SerializeField] private float strafeThrust;
     [SerializeField] private float frontThrust;
-
+    [SerializeField] private UnityEvent OnExitShipEvent;
+    private bool exitShip;
+    
     private float upDown;
     private float strafe;
     private float frontBack;
@@ -18,6 +21,15 @@ public class ShipMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        if (exitShip)
+        {
+            OnExitShipEvent.Invoke();
+            Debug.Log("Exit Ship");
+        }
     }
 
     private void FixedUpdate()
@@ -98,4 +110,10 @@ public class ShipMovement : MonoBehaviour
     {
         frontBack = context.ReadValue<float>();
     }
+
+    public void OnExitShip(InputAction.CallbackContext context)
+    {
+        exitShip = context.ReadValue<float>() == 1;
+    }
+
 }

@@ -373,6 +373,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ExitShip",
+                    "type": "Button",
+                    "id": "a28bc6ea-2fb3-4ab2-a185-2da8bdac34e7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -474,6 +483,17 @@
                     "action": "FrontBack",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "4342c5c7-93d5-42a3-b11d-743fe988910d",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ExitShip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
