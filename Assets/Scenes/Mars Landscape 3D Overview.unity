@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 23916da3af1104b4abeb3b9be53334b1, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 39d27e80110a983468075fd1868610d7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -104117,10 +104117,10 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651765432628}
   - component: {fileID: 862513328}
-  - component: {fileID: 919132147776666511}
   - component: {fileID: 919132147776666513}
-  - component: {fileID: 919132147776666514}
   - component: {fileID: 919132147776666515}
+  - component: {fileID: 919132147776666511}
+  - component: {fileID: 919132147776666514}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
