@@ -355,6 +355,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Strafe",
+                    "type": "Button",
+                    "id": "048cbe25-6503-498a-825e-a9bf579e9785",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FrontBack",
+                    "type": "Button",
+                    "id": "394b7b01-a19a-4cdc-b1f7-36a471cdfbef",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -372,7 +390,7 @@
                 {
                     "name": "negative",
                     "id": "7cfc0fff-67ee-4a27-b345-ea7798c672d7",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -383,11 +401,77 @@
                 {
                     "name": "positive",
                     "id": "48034585-6d19-4d02-9514-a1d9560b6702",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "UpDown",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Strafe",
+                    "id": "14b426e4-06c6-4d05-a16a-64b6df11ea49",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "e0027675-f8ba-4a83-b56a-64bc9f61d342",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "b8ecf2d0-8037-4b6a-af66-6d358c89eae9",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "FrontBack",
+                    "id": "87f0ee3c-50d0-4ea3-83f0-9d69105bdf83",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FrontBack",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "14ec42ec-1970-4037-b9a2-450aa404f142",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FrontBack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "26792254-2e60-4c68-b0bf-4063a65fe0f6",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FrontBack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
