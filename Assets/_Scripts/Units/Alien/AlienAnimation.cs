@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using static UnityEngine.Rendering.DebugUI;
 
 public class AlienAnimation : MonoBehaviour
 {
@@ -14,26 +15,19 @@ public class AlienAnimation : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void SetIdleState()
+    public void SetIdleState(bool value)
     {
-        animator.SetBool("IsIdle", true);
-        animator.SetBool("IsWalking", false);
-        animator.SetBool("IsWorking", false);
-
+        animator.SetBool("IsIdle", value);
     }
 
-    public void SetWalkState()
+    public void SetWalkState(bool value)
     {
-        animator.SetBool("IsIdle", false);
-        animator.SetBool("IsWalking", true);
-        animator.SetBool("IsWorking", false);
+        animator.SetBool("IsWalking", value);
     }
 
-    public void SetWorkState()
+    public void SetWorkState(bool value)
     {
-        animator.SetBool("IsIdle", false);
-        animator.SetBool("IsWalking", false);
-        animator.SetBool("IsWorking", true);
+        animator.SetBool("IsWorking", value);
     }
 
     public void SetGoInsideGunState()

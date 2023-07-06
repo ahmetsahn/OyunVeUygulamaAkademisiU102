@@ -29,9 +29,10 @@ public class AlienAIMovement : MonoBehaviour
 
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            alienAnimation.SetIdleState();
+            alienAnimation.SetWalkState(false);
+            alienAnimation.SetIdleState(true);
             timer += Time.deltaTime;
-
+            
             if (timer >= waitTime)
             {
                 Vector3 point;
@@ -39,13 +40,15 @@ public class AlienAIMovement : MonoBehaviour
                 if (RandomPoint(transform.position, range, out point))
                 {
                     Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                    alienAnimation.SetWalkState();
+                    alienAnimation.SetIdleState(false);
+                    alienAnimation.SetWalkState(true);
                     agent.SetDestination(point);
                     timer = 0.0f;
                 }
             }
 
         }
+
 
     }
     
@@ -68,19 +71,14 @@ public class AlienAIMovement : MonoBehaviour
 
     public void WorkMove()
     {
-        Transform[] stones = GameObject.Find("Stones").GetComponentsInChildren<Transform>();
-
+        GameObject[] stones = GameObject.FindGameObjectsWithTag("Stone");
         Transform closestStone = null;
         float closestDistance = Mathf.Infinity;
 
-        foreach (Transform stone in stones)
+        foreach (GameObject stone in stones)
         {
-            
-            if (stone == stones[0])
-                continue;
-
-           
-            Vector3 stonePosition = stone.position;
+         
+            Vector3 stonePosition = stone.transform.position;
 
            
             float distance = Vector3.Distance(stonePosition, transform.position);
@@ -89,16 +87,18 @@ public class AlienAIMovement : MonoBehaviour
             if (distance < closestDistance)
             {
                 closestDistance = distance;
-                closestStone = stone;
+                closestStone = stone.transform;
             }
         }
 
         agent.SetDestination(closestStone.position);
-        alienAnimation.SetWalkState();
+        alienAnimation.SetIdleState(false);
+        alienAnimation.SetWalkState(true);
 
         if (closestDistance <= agent.stoppingDistance)
         {
-            alienAnimation.SetWorkState();
+            alienAnimation.SetWalkState(false);
+            alienAnimation.SetWorkState(true);
             alienAnimation.SetWorkRigHeight();
             OnWork.Invoke();
         }
@@ -124,7 +124,7 @@ public class AlienAIMovement : MonoBehaviour
         transform.DOScale(1f, 0.5f).onComplete += () =>
             {
                 alien.SetState(alien.workState);
-                alienAnimation.SetWorkState();
+               
             };
     }
 

@@ -5,9 +5,16 @@ public class AlienFarm : MonoBehaviour
 {
 
     [SerializeField] private IntReference currentDiamond;
+    private Alien alien;
+
+    private void Awake()
+    {
+        alien = GetComponent<Alien>();
+    }
 
     public void IncreaseHitOnRockCounter()
     {
-        currentDiamond.Value++;
+        if (alien.isMine)
+            currentDiamond.Value++;
     }
 }

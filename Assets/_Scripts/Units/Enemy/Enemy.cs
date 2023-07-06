@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public DeathState deathState = new();
     private EnemyAIMovement enemyAIMovement;
     private EnemyAttack enemyAttack;
-
+    [SerializeField] private Alien[] protectedAliens;
 
     private void Awake()
     {
@@ -60,5 +60,12 @@ public class Enemy : MonoBehaviour
         enemyAIMovement.DeathEnter();
     }
 
-  
+    public void SetProtectedAliens()
+    {
+        foreach (var alien in protectedAliens)
+        {
+            alien.isMine = true;
+        }
+    }
+
 }

@@ -6,7 +6,8 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private FloatReference currentHealth;
     [SerializeField] private FloatReference maxHealth;
-    
+    [SerializeField] private UnityEvent onDeath;
+
     private Enemy enemy;
 
     private void Awake()
@@ -23,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currentHealth.Value <= 0)
         {
+            onDeath.Invoke();
             enemy.SetState(enemy.deathState);
         }
 

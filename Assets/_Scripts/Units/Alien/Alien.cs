@@ -7,6 +7,8 @@ public class Alien : MonoBehaviour
     private IAlienState currentState;
     public FreeState freeState = new();
     public WorkState workState = new();
+    [SerializeField] private bool isWork;
+    [field: SerializeField] public bool isMine { get; set; }
 
     private AlienAIMovement alienAIMovement;
 
@@ -17,7 +19,7 @@ public class Alien : MonoBehaviour
 
     private void Start()
     {
-        currentState = freeState;
+        currentState = isWork ? workState : freeState;
     }
 
     private void Update()
