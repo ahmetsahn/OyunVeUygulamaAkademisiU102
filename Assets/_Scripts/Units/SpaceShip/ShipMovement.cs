@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using UnityEngine.Events;
+using System.Collections;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class ShipMovement : MonoBehaviour
         if (exitShip)
         {
             OnExitShipEvent.Invoke();
-            Debug.Log("Exit Ship");
+            StartCoroutine(DelayCameraTransition());
         }
     }
 
@@ -114,6 +115,13 @@ public class ShipMovement : MonoBehaviour
     public void OnExitShip(InputAction.CallbackContext context)
     {
         exitShip = context.ReadValue<float>() == 1;
+    }
+
+   
+    IEnumerator DelayCameraTransition()
+    {
+        yield return new WaitForSeconds(2f);
+        Camera.main.GetComponent<Cinemachine.CinemachineBrain>().m_DefaultBlend.m_Time = 0.1f;
     }
 
 }
