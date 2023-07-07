@@ -15,7 +15,6 @@ public abstract class BaseWeapon : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        isHave.Value = false;
     }
     
     public virtual void Shoot()

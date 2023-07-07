@@ -12,6 +12,7 @@ public class RiffleWeapon : BaseWeapon
     [SerializeField] private AudioClip reloadSound;
     [SerializeField] private AudioClip emptySound;
 
+    
     private void Start()
     {
         canReload = true;

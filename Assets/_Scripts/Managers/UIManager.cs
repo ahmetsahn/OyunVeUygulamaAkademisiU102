@@ -45,6 +45,7 @@ public class UIManager : MonoBehaviour
         currentDiamond.Value = 0;
         isOpenMarket.Value = false;
         isCloseMarket.Value = false;
+        riffleIsHave.Value = false;
     }
 
     private void Update()
