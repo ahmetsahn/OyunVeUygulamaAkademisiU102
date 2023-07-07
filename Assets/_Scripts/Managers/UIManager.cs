@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI collectorBulletCountText;
@@ -24,7 +25,17 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private BoolReference isOpenMarket;
     [SerializeField] private BoolReference isCloseMarket;
+    [SerializeField] private BoolReference riffleIsHave;
     [SerializeField] private GameObject marketPanel;
+    [SerializeField] private IntReference rifflePrice;
+    [SerializeField] private AudioClip buySound;
+    private AudioSource audioSource;
+    
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -45,18 +56,37 @@ public class UIManager : MonoBehaviour
 
         if (isOpenMarket.Value)
         {
+            
             marketPanel.SetActive(true);
-            marketPanel.transform.DOScale(0.6f, 1f).SetEase(Ease.OutBack);
+            marketPanel.transform.DOScale(0.6f, 1f).SetEase(Ease.OutBack).onComplete += () => Time.timeScale = 0;
             isOpenMarket.Value = false;
         }
 
         if (isCloseMarket.Value)
         {
-            marketPanel.transform.DOScale(0f, 1f).SetEase(Ease.InBack).onComplete += () => marketPanel.SetActive(false);
+            Time.timeScale = 1;
+            marketPanel.transform.DOScale(0f, 1f).SetEase(Ease.InBack).onComplete += () => 
+            {
+                
+                marketPanel.SetActive(false);
+                
+            };
             isCloseMarket.Value = false;
         }
 
 
+    }
+
+    public void BuyRiffle()
+    {
+        if(currentDiamond.Value >= rifflePrice.Value)
+        {
+            riffleIsHave.Value = true;
+            currentDiamond.Value -= rifflePrice.Value;
+            audioSource.PlayOneShot(buySound);
+            DOTween.To(() => currentDiamond.Value, x => currentDiamond.Value = x, currentDiamond.Value, 0.5f);
+        }
+       
     }
 
 }

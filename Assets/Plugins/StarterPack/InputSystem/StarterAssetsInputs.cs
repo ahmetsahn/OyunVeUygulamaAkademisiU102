@@ -79,11 +79,15 @@ namespace StarterAssets
 
         public void OnOpenMarketPanel(InputValue value)
         {
+            
+            cursorInputForLook = false;
             OpenMarketPanelInput(value.isPressed);
         }
 
         public void OnCloseMarketPanel(InputValue value)
         {
+            
+            cursorInputForLook = true;
             CloseMarketPanelInput(value.isPressed);
         }
 

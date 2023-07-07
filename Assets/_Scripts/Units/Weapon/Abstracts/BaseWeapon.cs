@@ -1,3 +1,4 @@
+using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
@@ -7,12 +8,14 @@ public abstract class BaseWeapon : MonoBehaviour
     [SerializeField] private ParticleSystem shootEffect;
     [SerializeField] private AudioClip shootSound;
     protected AudioSource audioSource;
+    [field : SerializeField] public BoolReference isHave { get; set; }
 
     public bool canReload;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        isHave.Value = false;
     }
     
     public virtual void Shoot()
@@ -54,4 +57,5 @@ public abstract class BaseWeapon : MonoBehaviour
     {
         
     }
+
 }

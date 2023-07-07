@@ -82,4 +82,6 @@ public class RiffleWeapon : BaseWeapon
         hitEffect.transform.position = MousePosition.Instance.GetMousePos();
         hitEffect.gameObject.SetActive(true);
     }
+
+    
 }

@@ -15,9 +15,10 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private GameObject[] weaponsUIPanel;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
-   
 
-    private int currentWeaponIndex = 0;
+
+    private int currentWeaponIndex;
+    private int nextWeaponIndex;
 
 
 
@@ -27,7 +28,12 @@ public class ThirdPersonShooterController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-  
+    private void Start()
+    {
+        currentWeaponIndex = 0;
+        nextWeaponIndex = 1;
+    }
+
 
 
     private void Update()
@@ -35,12 +41,14 @@ public class ThirdPersonShooterController : MonoBehaviour
         SetAimTargetTransform();
         Aim();
 
-        if (starterAssetsInputs.swapWeapon)
+        if (starterAssetsInputs.swapWeapon && weapons[nextWeaponIndex].isHave.Value)
         {
             animator.SetTrigger("SwapWeapon");
             starterAssetsInputs.swapWeapon = false;
             starterAssetsInputs.AimInput(false);
         }
+
+        else { starterAssetsInputs.swapWeapon = false; }
 
         if (starterAssetsInputs.reloadBullet && weapons[currentWeaponIndex].canReload)
         {
@@ -49,12 +57,8 @@ public class ThirdPersonShooterController : MonoBehaviour
             starterAssetsInputs.reloadBullet = false;
         }
 
-        else
-        {
-            starterAssetsInputs.reloadBullet = false;
-        }
-
-        
+        else { starterAssetsInputs.reloadBullet = false; }
+       
     }
 
     private void SetAimTargetTransform()
@@ -111,6 +115,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         weaponsUIPanel[currentWeaponIndex].SetActive(false);
         weapons[currentWeaponIndex].gameObject.SetActive(false);
         currentWeaponIndex = (currentWeaponIndex + 1) % weapons.Length;
+        nextWeaponIndex = (nextWeaponIndex + 1) % weapons.Length;
         weapons[currentWeaponIndex].gameObject.SetActive(true);
         weaponsUIPanel[currentWeaponIndex].SetActive(true);
 
