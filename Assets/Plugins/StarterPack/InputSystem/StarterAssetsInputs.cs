@@ -1,5 +1,6 @@
 using ScriptableObjectArchitecture;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -27,6 +28,7 @@ namespace StarterAssets
 		[Header("Mouse Cursor Settings")]
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
+
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		public void OnMove(InputValue value)
@@ -79,14 +81,14 @@ namespace StarterAssets
 
         public void OnOpenMarketPanel(InputValue value)
         {
-            
+		
             cursorInputForLook = false;
             OpenMarketPanelInput(value.isPressed);
         }
 
         public void OnCloseMarketPanel(InputValue value)
         {
-            
+          
             cursorInputForLook = true;
             CloseMarketPanelInput(value.isPressed);
         }
