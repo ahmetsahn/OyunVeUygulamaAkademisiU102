@@ -1,3 +1,4 @@
+using ScriptableObjectArchitecture;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -17,6 +18,8 @@ namespace StarterAssets
 		public bool swapWeapon;
         public bool enterShip;
         public bool reloadBullet;
+        public BoolReference openMarketPanel;
+        public BoolReference closeMarketPanel;
 
         [Header("Movement Settings")]
 		public bool analogMovement;
@@ -74,6 +77,15 @@ namespace StarterAssets
             ReloadBulletInput(value.isPressed);
         }
 
+        public void OnOpenMarketPanel(InputValue value)
+        {
+            OpenMarketPanelInput(value.isPressed);
+        }
+
+        public void OnCloseMarketPanel(InputValue value)
+        {
+            CloseMarketPanelInput(value.isPressed);
+        }
 
 #endif
 
@@ -123,7 +135,17 @@ namespace StarterAssets
             reloadBullet = newReloadBulletState;
         }
 
-            private void OnApplicationFocus(bool hasFocus)
+        public void OpenMarketPanelInput(bool newOpenMarketPanelState)
+        {
+            openMarketPanel.Value = newOpenMarketPanelState;
+        }
+
+        public void CloseMarketPanelInput(bool newCloseMarketPanelState)
+        {
+            closeMarketPanel.Value = newCloseMarketPanelState;
+        }
+
+        private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
 		}

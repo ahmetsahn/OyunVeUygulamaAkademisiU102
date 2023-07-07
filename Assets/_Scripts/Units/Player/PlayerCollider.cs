@@ -42,4 +42,5 @@ public class PlayerCollider : MonoBehaviour
             OnTriggerExitShipArea.Invoke();
         }
     }
+
 }

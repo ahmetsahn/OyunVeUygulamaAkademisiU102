@@ -85,6 +85,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OpenMarketPanel",
+                    "type": "Button",
+                    "id": "33152f55-0508-4490-a8df-b834b6510fe7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CloseMarketPanel",
+                    "type": "Button",
+                    "id": "10f255d9-3962-4770-a042-fd05c5060afe",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -338,6 +356,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ReloadBullet",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "418d00e5-dc2b-4d73-b733-913a2d8ae38a",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenMarketPanel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4f5158ce-454f-4435-877b-ad3ce7f4e812",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseMarketPanel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

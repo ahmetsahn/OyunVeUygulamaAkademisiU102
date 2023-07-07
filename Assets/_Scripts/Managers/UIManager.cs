@@ -1,3 +1,4 @@
+using DG.Tweening;
 using ScriptableObjectArchitecture;
 using TMPro;
 using UnityEngine;
@@ -21,12 +22,18 @@ public class UIManager : MonoBehaviour
     [SerializeField] private FloatReference currentHealth;
     [SerializeField] private FloatReference maxHealth;
 
+    [SerializeField] private BoolReference isOpenMarket;
+    [SerializeField] private BoolReference isCloseMarket;
+    [SerializeField] private GameObject marketPanel;
+
     private void Start()
     {
         currentCollectorBulletCount.Value = 0;
         currentRiffleBulletCount.Value = magazineBulletCapacity.Value;
         totalRiffleBulletCount.Value = totalRiffleBulletCapacity.Value;
         currentDiamond.Value = 0;
+        isOpenMarket.Value = false;
+        isCloseMarket.Value = false;
     }
 
     private void Update()
@@ -35,6 +42,21 @@ public class UIManager : MonoBehaviour
         riffleBulletCountText.text = currentRiffleBulletCount.Value.ToString() + " / " + totalRiffleBulletCount.Value.ToString();
         diamondCountText.text = currentDiamond.Value.ToString();
         healthBar.fillAmount = currentHealth.Value / maxHealth.Value;
+
+        if (isOpenMarket.Value)
+        {
+            marketPanel.SetActive(true);
+            marketPanel.transform.DOScale(0.6f, 1f).SetEase(Ease.OutBack);
+            isOpenMarket.Value = false;
+        }
+
+        if (isCloseMarket.Value)
+        {
+            marketPanel.transform.DOScale(0f, 1f).SetEase(Ease.InBack).onComplete += () => marketPanel.SetActive(false);
+            isCloseMarket.Value = false;
+        }
+
+
     }
 
 }
