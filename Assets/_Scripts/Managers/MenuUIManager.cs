@@ -1,17 +1,29 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MenuUIManager : MonoBehaviour
 {
-    [SerializeField] private GameObject hazirlayanlarPanel;
-
     public void YeniOyun()
     {
         SceneManager.LoadScene("Game");
     }
 
-    public void Hazýrlayanlar()
+    // Settings Menu
+    [SerializeField] private AudioMixer audioMixer;
+
+    public void SetQuality(int qualityIndex)
     {
-        hazirlayanlarPanel.SetActive(true);    
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
+    }
+
+    public void Cikis()
+    {
+        Application.Quit();
     }
 }
