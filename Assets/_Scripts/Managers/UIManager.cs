@@ -7,16 +7,16 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI collectorBulletCountText;
+    [SerializeField] private Text collectorBulletCountText;
     [SerializeField] private IntReference currentCollectorBulletCount;
 
-    [SerializeField] private TextMeshProUGUI riffleBulletCountText;
+    [SerializeField] private Text riffleBulletCountText;
     [SerializeField] private IntReference currentRiffleBulletCount;
     [SerializeField] private IntReference magazineBulletCapacity;
     [SerializeField] private IntReference totalRiffleBulletCount;
     [SerializeField] private IntReference totalRiffleBulletCapacity;
 
-    [SerializeField] private TextMeshProUGUI diamondCountText;
+    [SerializeField] private Text diamondCountText;
     [SerializeField] private IntReference currentDiamond;
 
     [SerializeField] private Image healthBar;
