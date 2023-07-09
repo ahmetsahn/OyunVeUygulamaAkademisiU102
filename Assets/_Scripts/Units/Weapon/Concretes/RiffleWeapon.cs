@@ -25,15 +25,24 @@ public class RiffleWeapon : BaseWeapon
             currentBulletCount.Value--;
             PlayShootSound();
             PlayShootEffect();
-            GetHitEffect();
+            
 
             if (MousePosition.Instance.GetMousePos() != Vector3.zero)
             {
                 if (MousePosition.Instance.hit.collider.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
                 {
                     enemyHealth.TakeDamage(damage);
+                    GetEnemyHitEffect();
+                    Debug.Log("Enemy Hit");
+                }
+
+                else
+                {
+                    GetDefaultHitEffect();
                 }
             }
+
+           
         }
 
         else
@@ -77,12 +86,21 @@ public class RiffleWeapon : BaseWeapon
         audioSource.PlayOneShot(emptySound);
     }
 
-    private void GetHitEffect()
+    private void GetEnemyHitEffect()
     {
-        var hitEffect = HitEffectPool.Instance.Get();
+        var hitEffect = EnemyHitEffectPool.Instance.Get();
+        hitEffect.transform.position = MousePosition.Instance.GetMousePos();
+        hitEffect.gameObject.SetActive(true);
+
+        
+    }
+
+    private void GetDefaultHitEffect()
+    {
+        var hitEffect = DefaultHitEffectPool.Instance.Get();
         hitEffect.transform.position = MousePosition.Instance.GetMousePos();
         hitEffect.gameObject.SetActive(true);
     }
 
-    
+
 }

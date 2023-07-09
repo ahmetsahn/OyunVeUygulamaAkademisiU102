@@ -17,6 +17,6 @@ public class Plane : MonoBehaviour
 
     public void SetPlaneColor()
     {
-        terrain.terrainData.terrainLayers[0].diffuseRemapMax = UnityEngine.Color.green;
+        terrain.terrainData.terrainLayers[0].diffuseRemapMax = UnityEngine.Color.white;
     }
 }
