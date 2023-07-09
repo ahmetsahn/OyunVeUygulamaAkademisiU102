@@ -1055,7 +1055,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2923636279368402118}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -12.22, y: 0, z: -3.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1159,9 +1159,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1194,7 +1194,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1346,7 +1346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec825df7141a394469820bf9ba79d742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alienAIMovement: {fileID: 1922619078253660300}
+  isWork: 0
+  <isMine>k__BackingField: 1
 --- !u!114 &1922619078253660300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,7 +1360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18525d8cde2cd94192513d6fcaaa267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 31010677305686175}
   range: 10
   waitTime: 5
   OnWork:
@@ -1419,6 +1419,21 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 9ff784664e90ac34f96ecbf3b96f3491, type: 2}
+  UpdateUI:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: UpdateDiamondCountText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3043818295670591714
 GameObject:
   m_ObjectHideFlags: 0

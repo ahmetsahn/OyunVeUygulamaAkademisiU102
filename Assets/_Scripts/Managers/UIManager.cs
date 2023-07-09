@@ -48,35 +48,6 @@ public class UIManager : MonoBehaviour
         riffleIsHave.Value = false;
     }
 
-    private void Update()
-    {
-        collectorBulletCountText.text = currentCollectorBulletCount.Value.ToString() + " / 3";
-        riffleBulletCountText.text = currentRiffleBulletCount.Value.ToString() + " / " + totalRiffleBulletCount.Value.ToString();
-        diamondCountText.text = currentDiamond.Value.ToString();
-        healthBar.fillAmount = currentHealth.Value / maxHealth.Value;
-
-        if (isOpenMarket.Value)
-        {
-            
-            marketPanel.SetActive(true);
-            marketPanel.transform.DOScale(0.6f, 1f).SetEase(Ease.OutBack).onComplete += () => Time.timeScale = 0;
-            isOpenMarket.Value = false;
-        }
-
-        if (isCloseMarket.Value)
-        {
-            Time.timeScale = 1;
-            marketPanel.transform.DOScale(0f, 1f).SetEase(Ease.InBack).onComplete += () => 
-            {
-                
-                marketPanel.SetActive(false);
-                
-            };
-            isCloseMarket.Value = false;
-        }
-
-
-    }
 
     public void BuyRiffle()
     {
@@ -88,6 +59,45 @@ public class UIManager : MonoBehaviour
             DOTween.To(() => currentDiamond.Value, x => currentDiamond.Value = x, currentDiamond.Value, 0.5f);
         }
        
+    }
+
+    public void UpdateCollectorBulletCountText()
+    {
+        collectorBulletCountText.text = currentCollectorBulletCount.Value.ToString() + " / 3";
+    }
+
+    public void UpdateRiffleBulletCountText()
+    {
+        riffleBulletCountText.text = currentRiffleBulletCount.Value.ToString() + " / " + totalRiffleBulletCount.Value.ToString();
+    }
+
+    public void UpdateDiamondCountText()
+    {
+        diamondCountText.text = currentDiamond.Value.ToString();
+    }
+
+    public void UpdateHealthBar()
+    {
+        healthBar.fillAmount = currentHealth.Value / maxHealth.Value;
+    }
+
+    public void OpenMarketPanel()
+    {
+        marketPanel.SetActive(true);
+        marketPanel.transform.DOScale(0.6f, 1f).SetEase(Ease.OutBack).onComplete += () => Time.timeScale = 0;
+        isOpenMarket.Value = false;
+    }
+
+    public void CloseMarketPanel()
+    {
+        Time.timeScale = 1;
+        marketPanel.transform.DOScale(0f, 1f).SetEase(Ease.InBack).onComplete += () =>
+        {
+
+            marketPanel.SetActive(false);
+
+        };
+        isCloseMarket.Value = false;
     }
 
 }

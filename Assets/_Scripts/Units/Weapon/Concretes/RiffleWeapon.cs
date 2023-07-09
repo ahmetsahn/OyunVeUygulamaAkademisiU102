@@ -22,7 +22,7 @@ public class RiffleWeapon : BaseWeapon
             currentBulletCount.Value--;
             PlayShootSound();
             PlayShootEffect();
-            
+            base.Shoot();
 
             if (MousePosition.Instance.GetMousePos() != Vector3.zero)
             {
@@ -70,7 +70,9 @@ public class RiffleWeapon : BaseWeapon
         {
             canReload = false;
         }
-       
+
+        base.UpdateBulletCount();
+
     }
 
     public override void PlayReloadSound()

@@ -1,6 +1,7 @@
 using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.Events;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -21,6 +22,8 @@ namespace StarterAssets
         public bool reloadBullet;
         public BoolReference openMarketPanel;
         public BoolReference closeMarketPanel;
+        public UnityEvent OnOpenMarketPanelEvent;
+        public UnityEvent OnCloseMarketPanelEvent;
 
         [Header("Movement Settings")]
 		public bool analogMovement;
@@ -89,6 +92,7 @@ namespace StarterAssets
             Cursor.lockState = CursorLockMode.None;
             cursorInputForLook = false;
             OpenMarketPanelInput(value.isPressed);
+            OnOpenMarketPanelEvent.Invoke();
         }
 
         public void OnCloseMarketPanel(InputValue value)
@@ -98,6 +102,7 @@ namespace StarterAssets
             
             cursorInputForLook = true;
             CloseMarketPanelInput(value.isPressed);
+            OnCloseMarketPanelEvent.Invoke();
         }
 
 #endif

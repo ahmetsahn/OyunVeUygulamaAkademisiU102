@@ -1,10 +1,12 @@
 using UnityEngine;
 using ScriptableObjectArchitecture;
+using UnityEngine.Events;
 
 public class AlienCollectorWeapon : BaseWeapon
 {
     [SerializeField] private IntReference currentAmmo;
     [SerializeField] private int maxAmmo = 3;
+    
 
     private void Start()
     {
@@ -13,6 +15,7 @@ public class AlienCollectorWeapon : BaseWeapon
 
     public override void Shoot()
     {
+
         if (MousePosition.Instance.GetMousePos() != Vector3.zero)
         {
             if (MousePosition.Instance.hit.collider.gameObject.GetComponent<Alien>() != null)
@@ -23,6 +26,7 @@ public class AlienCollectorWeapon : BaseWeapon
                     MousePosition.Instance.hit.collider.gameObject.GetComponent<Alien>().HandleGoInsideGunMovement();
                     PlayShootSound();
                     PlayShootEffect();
+                    base.Shoot();
                 }
             }
 
@@ -32,7 +36,7 @@ public class AlienCollectorWeapon : BaseWeapon
                 {
                     currentAmmo.Value--;
                     GetAlien();
-
+                    base.Shoot();
                 }
             }
 

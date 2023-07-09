@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyAttack : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private AudioClip shootSound;
     [SerializeField] private GameObject shootEffect;
     private AudioSource audioSource;
-    
+    [SerializeField] private UnityEvent UpdateUI;
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class EnemyAttack : MonoBehaviour
             if (hit.collider.gameObject.TryGetComponent(out PlayerHealth playerHealth))
             {
                 playerHealth.TakeDamage(damage);
+                UpdateUI.Invoke();
             }
         }
         PlayShootSound();

@@ -1,6 +1,7 @@
 using ScriptableObjectArchitecture;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.Events;
 
 public abstract class BaseWeapon : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public abstract class BaseWeapon : MonoBehaviour
     [SerializeField] private AudioClip shootSound;
     protected AudioSource audioSource;
     [field : SerializeField] public BoolReference isHave { get; set; }
+    [SerializeField] private UnityEvent UpdateUI;
 
     public bool canReload;
 
@@ -19,7 +21,7 @@ public abstract class BaseWeapon : MonoBehaviour
     
     public virtual void Shoot()
     {
-        
+        UpdateUI.Invoke();
     }
 
     public void PlayShootSound()
@@ -44,7 +46,7 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public virtual void UpdateBulletCount()
     {
-
+        UpdateUI.Invoke();
     }
 
     public virtual void PlayReloadSound()
