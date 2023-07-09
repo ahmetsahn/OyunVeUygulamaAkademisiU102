@@ -13,14 +13,11 @@ public class RiffleWeapon : BaseWeapon
     [SerializeField] private AudioClip emptySound;
 
     
-    private void Start()
-    {
-        canReload = true;
-    }
-
     public override void Shoot()
     {
-        if(currentBulletCount.Value>0)
+        canReload = true;
+
+        if (currentBulletCount.Value>0)
         {
             currentBulletCount.Value--;
             PlayShootSound();
@@ -69,11 +66,11 @@ public class RiffleWeapon : BaseWeapon
             totalBulletCount.Value = 0;
         }
 
-        if (totalBulletCount.Value == 0)
+        if (totalBulletCount.Value == 0 || currentBulletCount.Value == magazineBulletCapacity.Value)
         {
             canReload = false;
         }
-
+       
     }
 
     public override void PlayReloadSound()
