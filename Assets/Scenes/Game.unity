@@ -1190,16 +1190,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: isWork
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: <isMine>k__BackingField
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2923636279368402118, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_Name
@@ -1207,54 +1197,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
       propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 982429896}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateDiamondCountText
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01470e641db49ca43a416cc50d185775, type: 3}
 --- !u!1 &415778355
@@ -1498,6 +1443,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
+        type: 3}
+      propertyPath: isWork
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
+        type: 3}
+      propertyPath: <isMine>k__BackingField
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2923636279368402118, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
@@ -2811,16 +2766,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: isWork
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: <isMine>k__BackingField
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2923636279368402118, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_Name
@@ -2828,54 +2773,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
       propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 982429896}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateDiamondCountText
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01470e641db49ca43a416cc50d185775, type: 3}
 --- !u!1001 &941641377
@@ -2940,16 +2840,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: isWork
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: <isMine>k__BackingField
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2923636279368402118, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
       propertyPath: m_Name
@@ -2957,54 +2847,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
       propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 982429896}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateDiamondCountText
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01470e641db49ca43a416cc50d185775, type: 3}
 --- !u!1 &982429894
@@ -3432,11 +3277,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
-      propertyPath: isMine
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
       propertyPath: isWork
       value: 0
       objectReference: {fileID: 0}
@@ -3452,54 +3292,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
       propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 982429896}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateDiamondCountText
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01470e641db49ca43a416cc50d185775, type: 3}
 --- !u!1 &1075406853
@@ -3756,11 +3551,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
-      propertyPath: isMine
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2617645149996858159, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
       propertyPath: isWork
       value: 0
       objectReference: {fileID: 0}
@@ -3776,54 +3566,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
         type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
       propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 982429896}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateDiamondCountText
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UIManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040163, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: UpdateUI.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5457316065703040220, guid: 01470e641db49ca43a416cc50d185775,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01470e641db49ca43a416cc50d185775, type: 3}
 --- !u!1 &1109521029 stripped

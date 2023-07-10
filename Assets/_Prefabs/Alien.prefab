@@ -1346,8 +1346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec825df7141a394469820bf9ba79d742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWork: 0
-  <isMine>k__BackingField: 1
+  isWork: 1
+  <isMine>k__BackingField: 0
 --- !u!114 &1922619078253660300
 MonoBehaviour:
   m_ObjectHideFlags: 0
