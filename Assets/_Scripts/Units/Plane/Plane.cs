@@ -1,6 +1,7 @@
 using System.Drawing;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Plane : MonoBehaviour
 {
     private Terrain terrain;
