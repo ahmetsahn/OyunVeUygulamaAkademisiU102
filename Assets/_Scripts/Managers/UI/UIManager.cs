@@ -2,6 +2,7 @@ using DG.Tweening;
 using ScriptableObjectArchitecture;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -30,7 +31,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private IntReference rifflePrice;
     [SerializeField] private AudioClip buySound;
     private AudioSource audioSource;
-    
+
 
     private void Awake()
     {
@@ -98,6 +99,16 @@ public class UIManager : MonoBehaviour
 
         };
         isCloseMarket.Value = false;
+    }
+
+    public void YeniOyun()
+    {
+        SceneManager.LoadScene("Game");
+    }
+
+    public void Cikis()
+    {
+        Application.Quit();
     }
 
 }

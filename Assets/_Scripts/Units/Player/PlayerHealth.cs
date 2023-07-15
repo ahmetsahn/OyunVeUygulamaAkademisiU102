@@ -23,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth.Value <= 0)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             OnDeath.Invoke();
             isPlayerDead.Value = true;
         }
