@@ -91,7 +91,7 @@ https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=990311782857
 
 
 **Daily Scrum**: Daily Scrum toplantıları hergün discord üzerinden sesli olarak yapıldı.  
-  [Sprint 1 Daily Scrum Chats]
+  [Sprint 1 Daily Scrum Chats] https://docs.google.com/document/d/1K6V-iIESjjCfodV0ELNIfcBFHgAbl5qn51H5J3C4pFY/edit?usp=sharing 
  
 
   **Sprint board update**: Sprint board screenshotları:
@@ -109,6 +109,41 @@ https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=990311782857
  
 
 
+- **Sprint Review**: 
+Oyunda uzaylılara maden mekaniği özellikleri eklendi.
+Maden bölgesini koruyan yapay zekalar eklendi.
+Silah değiştirme özelliği eklendi.
+Sprint Review katılımcıları: Roşna Sarıkaş, Ahmet Öztürk Şahin, Ali Uzunkaya
+
+
+- **Sprint Retrospective:**
+  •Projenin bitişi için planlama yapıldı
+  •Projeyi hızlandırma kararı alınmıştır.
+  •Projede değerlendirme için artı puan olacak noktalar arasından seçimler yapıldı.
+ 
+---
+
+## Product Backlog URL
+
+https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=140801382840
+
+---
+
+# Sprint 3
+
+**Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
+
+
+**Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 350 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde üçüncü sprint'in 150 ile devam etmesinin uygun olduğuna karar verildi.
+
+
+**Daily Scrum**: Daily Scrum toplantıları hergün discord üzerinden sesli olarak yapıldı.  
+  [Sprint 3 Daily Scrum Chats] https://docs.google.com/document/d/1Rw7_NZPcUi9zj6tTMGWdS8FO3Ts3XLBMUk5_QINXRiE/edit?usp=sharing
+
+**Sprint board update**: Sprint board screenshotları:
+  
+- **Ürün Durumu**: Ekran görüntüleri:
+ 
 - **Sprint Review**: 
 Oyunda uzaylılara maden mekaniği özellikleri eklendi.
 Maden bölgesini koruyan yapay zekalar eklendi.
