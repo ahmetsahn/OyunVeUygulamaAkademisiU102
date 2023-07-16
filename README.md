@@ -45,7 +45,7 @@ Karakterimiz uzay gemisiyle U-102 gezegenine iniş yapar. Amacımız gezegende b
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 350 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in 100 ile başlamasının uygun olduğuna karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in 100 ile başlamasının uygun olduğuna karar verildi.
 
 
 - **Daily Scrum**: Daily Scrum toplantıları hergün discord üzerinden sesli olarak yapıldı.  
@@ -87,7 +87,7 @@ https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=990311782857
 **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
 
-**Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 350 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ikinci sprint'in 100 ile devam etmesinin uygun olduğuna karar verildi.
+**Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ikinci sprint'in 100 ile devam etmesinin uygun olduğuna karar verildi.
 
 
 **Daily Scrum**: Daily Scrum toplantıları hergün discord üzerinden sesli olarak yapıldı.  
@@ -131,10 +131,10 @@ https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=140801382840
 
 # Sprint 3
 
-**Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
+**Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
 
-**Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 350 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde üçüncü sprint'in 150 ile devam etmesinin uygun olduğuna karar verildi.
+**Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde üçüncü sprint'in 100 ile devam etmesinin uygun olduğuna karar verildi.
 
 
 **Daily Scrum**: Daily Scrum toplantıları hergün discord üzerinden sesli olarak yapıldı.  
@@ -145,21 +145,24 @@ https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=140801382840
 - **Ürün Durumu**: Ekran görüntüleri:
  
 - **Sprint Review**: 
-Oyunda uzaylılara maden mekaniği özellikleri eklendi.
-Maden bölgesini koruyan yapay zekalar eklendi.
-Silah değiştirme özelliği eklendi.
+Uzay gemisi eklendi.
+Market eklendi.
+Optimizasyon yapıldı.
+Harita düzenlemesi yapıldı.
+Oyun menüsü eklendi.
+Game analytics üzerinde çalışıldı.
+Ses efektleri eklendi.
+UI tasarımı yapıldı.
 Sprint Review katılımcıları: Roşna Sarıkaş, Ahmet Öztürk Şahin, Ali Uzunkaya
 
 
 - **Sprint Retrospective:**
-  •Projenin bitişi için planlama yapıldı
-  •Projeyi hızlandırma kararı alınmıştır.
-  •Projede değerlendirme için artı puan olacak noktalar arasından seçimler yapıldı.
+  •Zamanlama hataları üzerine konuşuldu.
  
 ---
 
 ## Product Backlog URL
 
-https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=140801382840
+https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=12071353332
 
 ---
