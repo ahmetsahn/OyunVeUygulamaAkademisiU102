@@ -8,7 +8,6 @@ Takım Unity U-102
 - Roşna Sarıkaş: Scrum Master / Developer
 - Ahmet Öztürk Şahin: Developer
 - Ali Uzunkaya: Product Owner / Developer
-- Elif Sağlam: Developer
 
 ## Oyun İsmi
 
