@@ -95,8 +95,10 @@ https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=990311782857
  
 
   **Sprint board update**: Sprint board screenshotları:
-  
-![sprint2](https://github.com/AliUzunkaya/Deneme/assets/121873745/ad691b53-db47-4e41-bb64-33d45ab32405)
+  ![WhatsApp Image 2023-07-16 at 13 49 04](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/65602878/01ed06e7-380f-41eb-9e17-ec41ac32ff9b)
+
+![WhatsApp Image 2023-07-16 at 13 48 29](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/65602878/539ed8a5-edb6-4320-968a-35b87d09db03)
+
   
 
 - **Ürün Durumu**: Ekran görüntüleri:
@@ -141,8 +143,19 @@ https://miro.com/app/board/uXjVM9rT6Uw=/?share_link_id=140801382840
   [Sprint 3 Daily Scrum Chats] https://docs.google.com/document/d/1Rw7_NZPcUi9zj6tTMGWdS8FO3Ts3XLBMUk5_QINXRiE/edit?usp=sharing
 
 **Sprint board update**: Sprint board screenshotları:
+![WhatsApp Image 2023-07-16 at 14 00 21](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/65602878/23de9efb-5264-474c-b4e3-02ead68227e1)
+
+![WhatsApp Image 2023-07-16 at 13 50 05](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/65602878/a9cea7de-2ce2-4023-8ffb-0a1a13e2f1e9)
+
   
 - **Ürün Durumu**: Ekran görüntüleri:
+![image](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/65602878/7b0e8ada-165c-4714-880b-0e4476f884b8)
+![image](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/65602878/a7cdf7a8-a185-4c3d-9a2f-7e3ce77f6ba7)
+![image](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/65602878/6328b0e1-f8fc-4ab3-80fe-dad88303b6b2)
+![image](https://github.com/ahmetsahn/OyunVeUygulamaAkademisiU102/assets/65602878/d20238f5-93a8-4c82-8eb6-af18b78b914e)
+
+
+
  
 - **Sprint Review**: 
 Uzay gemisi eklendi.
